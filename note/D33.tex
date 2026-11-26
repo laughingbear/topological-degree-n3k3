@@ -1,0 +1,130 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\sign}{sign}
+\newcommand{\A}{\mathcal A}
+
+\title{The maximal topological degree for $n=k=3$}
+\author{Laughing Bear}
+\date{November 26, 2026}
+
+\begin{document}
+\begin{abstract}
+For fewnomial maps $F\colon\mathbb R^3_{>0}\to\mathbb R^3$ with $N$ monomials whose exponent and coefficient matrices have nonzero maximal minors, we show $|\deg F|\le\lfloor(3N-8)/4\rfloor$. For $N=7$ this gives $|\deg F|\le 3$. Together with an explicit, exactly verified system of degree $3$, this answers the first open case $n=k=3$ of Bihan's question: $\mathcal D(3,3)=\{0,1,2,3\}$. Via Bihan's $H$-duality, the bound also gives $\mathcal D(n,3)\subseteq\{0,\dots,\lfloor(3n+4)/4\rfloor\}$.
+\end{abstract}
+\maketitle
+
+
+
+\section{Setting}
+We follow F.~Bihan, \emph{Descartes' rule of signs for the topological degree}, arXiv:2611.34336 (henceforth [B]), and [D] = arXiv:2610.29808.
+Let $\A=\{a_1,\dots,a_N\}\subset\mathbb R^n$, $N=n+k+1$, let $C$ be a real $n\times N$ matrix, and let $F(x)=\sum_i C_i x^{a_i}$.
+Write $\widehat A$ for the $(n+1)\times N$ matrix with columns $(1,a_i)$.
+$(U_A)$ and $(U_C)$ mean that all maximal minors of $\widehat A$, respectively $C$, are nonzero.
+$\mathcal D(n,k)$ is the set of values of $|\deg F|$ under $(U_A)$ and $(U_C)$, where $\deg F$ is the Brouwer degree on the positive orthant.
+[B, \S6] (and already [D, v1, Oct.~21, 2026]) gives $|\deg F|\le 4$ for $n=k=3$ and calls $n=k=3$ the first open case.
+
+\section{The bound}
+\begin{theorem}\label{thm:main}
+Let $n=3$, assume $(U_A)$ and $(U_C)$, and let $V\le N$ be the number of vertices of $P=\operatorname{conv}\A$. Let $p$ and $q$ be the numbers of facets of $P$ whose image triangle (defined below) is positively, respectively negatively, oriented. Then
+\[
+4\,|\deg F|\ \le\ \max(p,q)+V-4\ \le\ 3V-8\ \le\ 3N-8 .
+\]
+In particular $\mathcal D(3,3)\subseteq\{0,1,2,3\}$.
+\end{theorem}
+
+\begin{proof}
+\emph{Reduction.}
+Under $(U_A)$ no four points of $\A$ are coplanar.
+So every facet of $P$ is a triangle with exactly three points of $\A$, and every point of $\A$ on $\partial P$ is a vertex.
+Hence the boundary complex $T$ is a simplicial $2$-sphere with $V$ vertices, $E=3V-6$ edges and $p+q=2V-4$ triangles, and every face of $P$ is a union of simplices of $T$.
+$(U_A)$ and $(U_C)$ imply (H) [B, \S2.1].
+By [B, Lemma~2.1] (= [D, Lemmas 3.1--3.2]), $\deg F$ is the degree of $g=\Pi_T/|\Pi_T|\colon\partial P\to S^2$, where $\Pi_T$ is affine on each triangle and sends $a_s\mapsto C_s$, and $\partial P$ is oriented as a boundary.
+For an outward-ordered facet $t=(i,j,k)$, the columns $C_i,C_j,C_k$ are linearly independent by $(U_C)$.
+So $\Pi_T$ maps $t$ affinely and injectively onto a planar triangle that misses $0$, and $g$ maps $t$ homeomorphically onto the geodesic triangle $\Delta_t$ spanned by $C_i/|C_i|$, $C_j/|C_j|$, $C_k/|C_k|$.
+That triangle is non-degenerate, lies in an open hemisphere, and has all three angles in $(0,\pi)$.
+Its local degree is $\sigma_t=\sign\det(C_i,C_j,C_k)$, which agrees with the sign in [B, Lemma~2.1].
+Counting preimages of a generic point gives
+\begin{equation}\label{eq:area}
+4\pi\deg F=\sum_t\sigma_t\,\operatorname{Area}(\Delta_t).
+\end{equation}
+(Under (H) alone the three columns of a facet could be coplanar, which gives a degenerate triangle with angles $0,0,\pi$. Hypothesis $(U_C)$ is what excludes this.)
+
+\emph{Gauss--Bonnet.}
+Fix a vertex $v$ with link cycle $v_1,\dots,v_m$, traversed in the orientation induced from the outward orientation of $\partial P$.
+By $(U_C)$, $C_{v_r}\not\parallel C_v$, so the projections $d_r$ of the $C_{v_r}$ to the tangent plane $C_v^\perp$ are nonzero.
+Since $\det(C_v,a,b)=\det(C_v,a^\perp,b^\perp)$, the signed angle $\sigma_t\angle_v(\Delta_t)$ of the triangle $t=(v,v_r,v_{r+1})$ equals the signed turning angle from $d_r$ to $d_{r+1}$.
+It is nonzero and lies in $(-\pi,\pi)$, since $d_r\parallel\pm d_{r+1}$ would make $C_v,C_{v_r},C_{v_{r+1}}$ linearly dependent.
+Summing around the link gives $2\pi w_v$, where $w_v\in\mathbb Z$ is the winding number of the closed polygon $(d_r)_r$ around $0$.
+Since $\operatorname{Area}(\Delta_t)=(\text{angle sum})-\pi$, summing \eqref{eq:area} over the triangles gives
+\begin{equation}\label{eq:gb}
+4\deg F=2\sum_v w_v-(p-q).
+\end{equation}
+
+\emph{Local inequality.}
+Let $\mathrm{pos}_v$ be the number of positive triangles at $v$.
+If $\mathrm{pos}_v\ge1$, then $2\pi w_v\le$ (sum of the positive angles at $v$) $<\pi\,\mathrm{pos}_v$, so $2w_v\le\mathrm{pos}_v-1$ because $w_v$ is an integer.
+If $\mathrm{pos}_v=0$, all signed angles at $v$ are negative, so $w_v\le-1$, and again $2w_v\le\mathrm{pos}_v-1$.
+Summing over the vertices, $2\sum_vw_v\le\sum_v\mathrm{pos}_v-V=3p-V$.
+
+\emph{Conclusion.}
+By \eqref{eq:gb}, $4\deg F\le 3p-V-p+q=p+(p+q)-V=p+V-4$.
+Applying this to $-C$, which negates $\deg F$ and exchanges $p$ and $q$, gives $-4\deg F\le q+V-4$.
+Finally, $\max(p,q)\le 2V-4$ and $V\le N$.
+\end{proof}
+
+\begin{corollary}
+For $n=3$: $|\deg F|\le\lfloor(3N-8)/4\rfloor$.
+This gives $1,2,3,4,4$ for $N=5,\dots,9$, consistent with $\mathcal D(3,1)=\{0,1\}$ and $\mathcal D(3,2)=\{0,1,2\}$ [B, Thm.~E].
+For every $N\ge7$ it is strictly stronger than [B, Thm.~C], which gives $|\deg F|\le N-3$ here.
+By [B, Thm.~D], $\mathcal D(n,3)=\mathcal D(3,n)\subseteq\{0,\dots,\lfloor(3n+4)/4\rfloor\}$.
+\end{corollary}
+
+\section{A system of degree 3}
+Take $N=7$ and
+\[
+\A=\{(13,11,18),(25,10,1),(18,18,8),(5,18,1),(0,10,6),(5,0,0),(17,2,6)\},
+\]
+\[
+C=\begin{pmatrix}
+-2&2&-7&9&3&-4&2\\
+-6&2&-1&3&9&-3&2\\
+7&10&-7&3&-4&-9&-10
+\end{pmatrix}.
+\]
+\begin{theorem}
+$(U_A)$ and $(U_C)$ hold, and $\deg F=3$. Hence $\mathcal D(3,3)=\{0,1,2,3\}$.
+\end{theorem}
+Verification:
+\begin{itemize}
+\item[(i)] In exact rational arithmetic, all $35$ maximal minors of $\widehat A$ and all $35$ of $C$ are nonzero. $P$ is simplicial with all $7$ points as vertices and $10$ facets.
+\item[(ii)] [B, Thm.~2.3] (= [D, Thm.~A]), evaluated exactly for $25$ generic vectors $u$, gives $\deg F=3$ every time. The signed-area formula \eqref{eq:area} gives $3$ as well, with all ten triangles positively oriented.
+\item[(iii)] Numerically, $F$ has (at least) five positive zeros, each certified by an interval Krawczyk test. Their Jacobian signs are $+,+,+,-,+$, summing to $3$. Completeness of this list is neither claimed nor needed, since (ii) is the proof.
+\end{itemize}
+Combinatorially, $\partial P$ is the $7$-vertex triangulation with valences $(6,5,5,5,3,3,3)$: a vertex coned over a hexagon $h_1\dots h_6$, with the other side triangulated by $h_1h_3h_5$ and three ears.
+The vertex map is a $3$-sheeted branched cover of $S^2$ with branch points of local degree $2$ at the four vertices of valence $\ge5$. Riemann--Hurwitz holds: $2\cdot3-2=4$.
+Explicit systems with the same $\A$ and $\deg F=0,-1,-2$ are given in the accompanying repository (replacing $C$ by $-C$ changes the sign of the degree).
+
+\begin{remark}
+For $n=3$, $\mathcal D(3,k)$ is exactly the set of absolute degrees of vertex maps $\partial P\to S^2$ (with geodesic triangles) from simplicial $2$-spheres with at most $k+4$ vertices, whose vertex images have all triples linearly independent.
+Every simplicial $2$-sphere is polytopal (Steinitz), and a realization can be perturbed to satisfy $(U_A)$.
+Extra points of $\A$ can be placed in the interior of $P$ with generic columns, and this does not change the degree.
+In particular $\mathcal D(3,k)\subseteq\mathcal D(3,k+1)$.
+Whether the bound of Theorem~\ref{thm:main} is attained for $N\ge8$ (e.g.\ $4\in\mathcal D(3,4)$) is open.
+\end{remark}
+
+\subsection*{Acknowledgment}
+The search, the proof and the verifications were carried out with the AI assistant Claude (Anthropic). An independent re-verification was done in a separate session with independently written code.
+Code and certificates: \url{https://github.com/laughingbear/topological-degree-n3k3}.
+
+\begin{thebibliography}{9}
+\bibitem{B} F.~Bihan, \emph{Descartes' rule of signs for the topological degree}, arXiv:2611.34336 (2026).
+\bibitem{D} F.~Bihan, arXiv:2610.29808 (2026), v1 Oct.~21, v2 Nov.~25.
+\end{thebibliography}
+\end{document}
