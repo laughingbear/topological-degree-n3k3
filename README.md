@@ -9,6 +9,8 @@ So the maximal topological degree for n = 3 with N monomials is exactly ⌊(3N�
 - The lower bound comes from base cases N = 5…8 plus a 7-vertex "gadget" glued on repeatedly. Degree is additive under gluing along a triangle, and each gadget adds 4 monomials and raises the degree by 3.
 - Explicit systems attaining the bound for N = 5…16, all exactly verified, are in [data/sharp_family.json](data/sharp_family.json). Check them with `python3 verify/verify_family.py`.
 - The gadget is [data/gadget.json](data/gadget.json); check it with `python3 verify/gadget_exact.py data/gadget.json`.
+- The base cases V₀ = 4, 5, 6 are in [data/base_cases.json](data/base_cases.json); the gadget itself is the V₀ = 7 base. The proof uses only these four tiny vertex maps plus the gadget.
+- An independent cold review (in a separate session, with separately written code) confirmed the systems, both lemmas, the induction, and novelty.
 
 History: D(3,3) = {0,1,2,3} (v1), then the N = 8, 9 addendum (v2), then all N (v3), all on 2026-11-26.
 

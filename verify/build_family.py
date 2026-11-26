@@ -5,7 +5,9 @@ exactly one negative image triangle t_g). Q is realized as a flat cap over its f
 (outward-flattened), a linear map M (det>0) sends the gadget's coefficient columns at t_g onto the host's at t.
 Facets t and t_g disappear; vertices: V + 4; degree: d + 3 (degree is additive since the removed image triangles
 coincide with opposite orientation). Exact verification of every output with Bihan's Theorem A (verify_exact.check)."""
-import numpy as np, json, sys, itertools, networkx as nx
+import numpy as np, json, sys, os, itertools, networkx as nx
+HERE = os.path.dirname(os.path.abspath(__file__)); DATA = os.path.join(HERE, '..', 'data')
+sys.path.insert(0, HERE)
 from fractions import Fraction
 from scipy.spatial import ConvexHull
 from verify_exact import check
@@ -28,8 +30,8 @@ def sig(C, t):
     a, b, c = t; return np.sign(np.linalg.det(np.array([C[a], C[b], C[c]])))
 
 # ---------- gadget: realize its triangulation as a flat cap over the negative triangle ----------
-G = np.load('gadget_V7_d3.npy', allow_pickle=True).item()
-gC = G['C'] * (1 if G['deg'] > 0 else -1)      # make degree +3 (negating C negates every orientation)
+G = json.load(open(os.path.join(DATA, 'gadget.json')))
+gC = np.array(G['C'], float)                   # integer gadget, degree +3, one negative triangle
 gT = [tuple(int(x) for x in t) for t in G['T']]
 assert round(degree(gT, gC)) == 3
 neg = [t for t in gT if sig(gC, t) < 0]; assert len(neg) == 1
@@ -61,7 +63,6 @@ def realize_cap():
                 rot = [img, img[1:] + img[:1], img[2:] + img[:2]]
                 if f not in rot: ok = False; break
             if ok:
-                inv = {phi[v]: v for v in phi}
                 return P, phi
     raise RuntimeError('no cap realization')
 
@@ -72,18 +73,11 @@ print('gadget cap realized', flush=True)
 def load(fn):
     S = json.load(open(fn)); return np.array(S['A'], float), np.array(S['C'], float).T
 def base(V):
-    if V == 7: return load('system.json')
-    if V == 8: return load('system_N8_deg4.json')
-    if V == 6:
-        S = json.load(open('/home/claude/rev_in/rev/small_examples.json'))['n3k2_deg2']
-        return np.array(S['A'], float), np.array(S['C'], float).T
-    if V == 5:
-        for _ in range(100000):
-            A = rng.integers(0, 12, size=(5, 3)).astype(float); F, h = outward_facets(A)
-            if len(h.vertices) < 5: continue
-            C = rng.normal(size=(5, 3))
-            if abs(round(degree(F, C))) == 1: return A, C
-    raise ValueError
+    """base systems from the repository data (all exactly verified)."""
+    if V == 7: return load(os.path.join(DATA, 'system_deg3.json'))
+    if V == 8: return load(os.path.join(DATA, 'system_N8_deg4.json'))
+    S = json.load(open(os.path.join(DATA, 'sharp_family.json')))[str(V)]
+    return np.array(S['A'], float), np.array(S['C'], float).T
 
 def glue(A, C):
     """glue one gadget onto a positively oriented facet of host (A, C) with positive degree."""
@@ -134,11 +128,16 @@ if __name__ == '__main__':
             for sc in [100, 1000, 10000, 100000]:
                 Ai, Ci = integerize(A * (1.0 / np.abs(A).max()) * 20, C, sa, sc)
                 if len(ConvexHull(Ai.astype(float)).vertices) < N: continue
-                UA, UC, fac, d, _ = check(Ai.tolist(), Ci.T.tolist(), [7, 11, -13])
-                if UA and UC and abs(d) == target:
+                res = []
+                for u in ([7, 11, -13], [1, 2, 3], [-5, 3, 8]):
+                    try: res.append(check(Ai.tolist(), Ci.T.tolist(), u))
+                    except ValueError: pass
+                ds = {r[3] for r in res}
+                UA = all(r[0] for r in res); UC = all(r[1] for r in res); d = next(iter(ds)) if len(ds) == 1 else None
+                if res and UA and UC and d is not None and abs(d) == target:
                     out[N] = {'A': Ai.tolist(), 'C': Ci.T.tolist(), 'deg': d}
                     print(f'N={N}: target {target}, float deg {dfl:.4f}, exact deg {d}, scale A {sa}, C {sc}', flush=True)
                     done = True; break
             if done: break
         if not done: print(f'N={N}: float deg {dfl:.4f}, integer certification failed', flush=True)
-    json.dump(out, open('sharp_family.json', 'w'))
+    json.dump(out, open(sys.argv[3] if len(sys.argv) > 3 else 'sharp_family_rebuilt.json', 'w'))

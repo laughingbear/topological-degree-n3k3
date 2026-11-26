@@ -12,11 +12,11 @@
 
 \title{The maximal topological degree of fewnomial systems in three variables}
 \author{Laughing Bear}
-\date{November 26, 2026 (version 3)}
+\date{November 26, 2026 (version 3.1)}
 
 \begin{document}
 \begin{abstract}
-For fewnomial maps $F\colon\mathbb R^3_{>0}\to\mathbb R^3$ with $N$ monomials whose exponent and coefficient matrices have nonzero maximal minors, we show $|\deg F|\le\lfloor(3N-8)/4\rfloor$, and that this bound is attained for every $N\ge4$. Equivalently, $\mathcal D(3,k)=\{0,1,\dots,\lfloor(3k+4)/4\rfloor\}$ for all $k\ge1$, and by Bihan's $H$-duality $\mathcal D(n,3)=\{0,1,\dots,\lfloor(3n+4)/4\rfloor\}$ for all $n\ge1$. In particular this answers the first open case $n=k=3$ of Bihan's question: $\mathcal D(3,3)=\{0,1,2,3\}$. The lower bound uses explicit, exactly verified systems for $N\le8$ and a gluing construction in which the degree is additive.
+For fewnomial maps $F\colon\mathbb R^3_{>0}\to\mathbb R^3$ with $N$ monomials whose exponent and coefficient matrices have nonzero maximal minors, we show $|\deg F|\le\lfloor(3N-8)/4\rfloor$, and that this bound is attained for every $N\ge5$. Equivalently, $\mathcal D(3,k)=\{0,1,\dots,\lfloor(3k+4)/4\rfloor\}$ for all $k\ge1$, and by Bihan's $H$-duality $\mathcal D(n,3)=\{0,1,\dots,\lfloor(3n+4)/4\rfloor\}$ for all $n\ge1$. In particular this answers the first open case $n=k=3$ of Bihan's question: $\mathcal D(3,3)=\{0,1,2,3\}$. The lower bound uses explicit, exactly verified systems for $N\le8$ and a gluing construction in which the degree is additive.
 \end{abstract}
 \maketitle
 
@@ -28,7 +28,7 @@ Let $\A=\{a_1,\dots,a_N\}\subset\mathbb R^n$, $N=n+k+1$, let $C$ be a real $n\ti
 Write $\widehat A$ for the $(n+1)\times N$ matrix with columns $(1,a_i)$.
 $(U_A)$ and $(U_C)$ mean that all maximal minors of $\widehat A$, respectively $C$, are nonzero.
 $\mathcal D(n,k)$ is the set of values of $|\deg F|$ under $(U_A)$ and $(U_C)$, where $\deg F$ is the Brouwer degree on the positive orthant.
-[B, \S6] (and already [D, v1, Oct.~21, 2026]) gives $|\deg F|\le 4$ for $n=k=3$ and calls $n=k=3$ the first open case.
+[B, Thm.~2] gives $|\deg F|\le 4$ for $n=k=3$; the introduction of [B] calls $n=k=3$ the first open case, and [B, \S5] states that for $n,k\ge3$ it is not known whether the bound of [B, Thm.~2] is sharp. (The same question already appeared in version~1 of [D], October~21, 2026.)
 
 \section{The bound}
 \begin{theorem}\label{thm:main}
@@ -44,12 +44,12 @@ In particular $\mathcal D(3,3)\subseteq\{0,1,2,3\}$.
 Under $(U_A)$ no four points of $\A$ are coplanar.
 So every facet of $P$ is a triangle with exactly three points of $\A$, and every point of $\A$ on $\partial P$ is a vertex.
 Hence the boundary complex $T$ is a simplicial $2$-sphere with $V$ vertices, $E=3V-6$ edges and $p+q=2V-4$ triangles, and every face of $P$ is a union of simplices of $T$.
-$(U_A)$ and $(U_C)$ imply (H) [B, \S2.1].
-By [B, Lemma~2.1] (= [D, Lemmas 3.1--3.2]), $\deg F$ is the degree of $g=\Pi_T/|\Pi_T|\colon\partial P\to S^2$, where $\Pi_T$ is affine on each triangle and sends $a_s\mapsto C_s$, and $\partial P$ is oriented as a boundary.
+$(U_A)$ and $(U_C)$ imply (H) [B, \S1.1].
+By [B, Lemma~1.1] (= [D, Lemmas 3.1--3.2]), $\deg F$ is the degree of $g=\Pi_T/|\Pi_T|\colon\partial P\to S^2$, where $\Pi_T$ is affine on each triangle and sends $a_s\mapsto C_s$, and $\partial P$ is oriented as a boundary.
 For an outward-ordered facet $t=(i,j,k)$, the columns $C_i,C_j,C_k$ are linearly independent by $(U_C)$.
 So $\Pi_T$ maps $t$ affinely and injectively onto a planar triangle that misses $0$, and $g$ maps $t$ homeomorphically onto the geodesic triangle $\Delta_t$ spanned by $C_i/|C_i|$, $C_j/|C_j|$, $C_k/|C_k|$.
 That triangle is non-degenerate, lies in an open hemisphere, and has all three angles in $(0,\pi)$.
-Its local degree is $\sigma_t=\sign\det(C_i,C_j,C_k)$, which agrees with the sign in [B, Lemma~2.1].
+Its local degree is $\sigma_t=\sign\det(C_i,C_j,C_k)$, which agrees with the sign in [B, Lemma~1.1].
 Counting preimages of a generic point gives
 \begin{equation}\label{eq:area}
 4\pi\deg F=\sum_t\sigma_t\,\operatorname{Area}(\Delta_t).
@@ -81,9 +81,9 @@ Finally, $\max(p,q)\le 2V-4$ and $V\le N$.
 
 \begin{corollary}
 For $n=3$: $|\deg F|\le\lfloor(3N-8)/4\rfloor$.
-This gives $1,2,3,4,4$ for $N=5,\dots,9$, consistent with $\mathcal D(3,1)=\{0,1\}$ and $\mathcal D(3,2)=\{0,1,2\}$ [B, Thm.~E].
-For every $N\ge7$ it is strictly stronger than [B, Thm.~C], which gives $|\deg F|\le N-3$ here.
-By [B, Thm.~D], $\mathcal D(n,3)=\mathcal D(3,n)\subseteq\{0,\dots,\lfloor(3n+4)/4\rfloor\}$.
+This gives $1,2,3,4,4$ for $N=5,\dots,9$, consistent with $\mathcal D(3,1)=\{0,1\}$ and $\mathcal D(3,2)=\{0,1,2\}$ [B, Thm.~2$'$].
+For every $N\ge7$ it is strictly stronger than [B, Thm.~2], which gives $|\deg F|\le N-3$ here.
+By [B, Thm.~3], $\mathcal D(n,3)=\mathcal D(3,n)\subseteq\{0,\dots,\lfloor(3n+4)/4\rfloor\}$.
 \end{corollary}
 
 \section{A system of degree 3}
@@ -104,7 +104,7 @@ $(U_A)$ and $(U_C)$ hold, and $\deg F=3$. Hence $\mathcal D(3,3)=\{0,1,2,3\}$.
 Verification:
 \begin{itemize}
 \item[(i)] In exact rational arithmetic, all $35$ maximal minors of $\widehat A$ and all $35$ of $C$ are nonzero. $P$ is simplicial with all $7$ points as vertices and $10$ facets.
-\item[(ii)] [B, Thm.~2.3] (= [D, Thm.~A]), evaluated exactly for $25$ generic vectors $u$, gives $\deg F=3$ every time. The signed-area formula \eqref{eq:area} gives $3$ as well, with all ten triangles positively oriented.
+\item[(ii)] [B, Thm.~1.3] (= [D, Thm.~A]), evaluated exactly for $25$ generic vectors $u$, gives $\deg F=3$ every time. The signed-area formula \eqref{eq:area} gives $3$ as well, with all ten triangles positively oriented.
 \item[(iii)] Numerically, $F$ has (at least) five positive zeros, each certified by an interval Krawczyk test. Their Jacobian signs are $+,+,+,-,+$, summing to $3$. Completeness of this list is neither claimed nor needed, since (ii) is the proof.
 \end{itemize}
 Combinatorially, $\partial P$ is the $7$-vertex triangulation with valences $(6,5,5,5,3,3,3)$: a vertex coned over a hexagon $h_1\dots h_6$, with the other side triangulated by $h_1h_3h_5$ and three ears.
@@ -114,7 +114,7 @@ Explicit systems with the same $\A$ and $\deg F=0,-1,-2$ are given in the accomp
 \begin{remark}
 For $n=3$, $\mathcal D(3,k)$ is exactly the set of absolute degrees of vertex maps $\partial P\to S^2$ (with geodesic triangles) from simplicial $2$-spheres with at most $k+4$ vertices, whose vertex images have all triples linearly independent.
 Every simplicial $2$-sphere is polytopal (Steinitz), and a realization can be perturbed to satisfy $(U_A)$.
-Extra points of $\A$ can be placed in the interior of $P$ with generic columns, and this does not change the degree.
+Extra points of $\A$ can be placed in the interior of $P$ with generic columns, and this does not change the degree [D, Thm.~C] (vertex reduction).
 In particular $\mathcal D(3,k)\subseteq\mathcal D(3,k+1)$.
 \end{remark}
 
@@ -131,9 +131,9 @@ C=\begin{pmatrix}
 \end{pmatrix}.
 \]
 \begin{theorem}
-$(U_A)$ and $(U_C)$ hold and $\deg F=-4$. Hence $\mathcal D(3,4)=\mathcal D(3,5)=\{0,1,2,3,4\}$, and by [B, Thm.~D] also $\mathcal D(4,3)=\mathcal D(5,3)=\{0,1,2,3,4\}$.
+$(U_A)$ and $(U_C)$ hold and $\deg F=-4$. Hence $\mathcal D(3,4)=\mathcal D(3,5)=\{0,1,2,3,4\}$, and by [B, Thm.~3] also $\mathcal D(4,3)=\mathcal D(5,3)=\{0,1,2,3,4\}$.
 \end{theorem}
-Verification is as in \S3: exact evaluation of [B, Thm.~2.3] for many generic $u$ gives $-4$; the signed-area formula gives $-4$ with all twelve triangles negatively oriented; numerically $F$ has six positive zeros, each Krawczyk-certified (one of them at $x_1\approx1.33\cdot10^4$), with Jacobian signs $+,-,-,-,-,-$.
+Verification is as in \S3: exact evaluation of [B, Thm.~1.3] for many generic $u$ gives $-4$; the signed-area formula gives $-4$ with all twelve triangles negatively oriented; numerically $F$ has six positive zeros, each Krawczyk-certified (one of them at $x_1\approx1.33\cdot10^4$), with Jacobian signs $+,-,-,-,-,-$.
 The boundary complex is the $8$-vertex triangulation with valences $(5,5,5,5,5,5,3,3)$, and the vertex map is a $4$-sheeted branched cover with six simple branch points, which is exactly the equality case of Theorem~\ref{thm:main} applied to $-C$: all twelve triangles have the same orientation ($q=12$), and the vertex windings are $w_v=-(\mathrm{val}_v-1)/2$, i.e.\ $-2$ at the six vertices of valence $5$ and $-1$ at the two of valence $3$.
 Since $\lfloor(3N-8)/4\rfloor=4$ for $N=8,9$ and $\mathcal D(3,k)$ is monotone in $k$, the bound of Theorem~\ref{thm:main} is attained for every $N\le9$. It was found by enumerating all $223{,}440$ labelled triangulations of $S^2$ on $8$ vertices (edge-flip closure) and maximising the degree over them for random vertex images.
 
@@ -142,7 +142,7 @@ Since $\lfloor(3N-8)/4\rfloor=4$ for $N=8,9$ and $\mathcal D(3,k)$ is monotone i
 \begin{theorem}\label{thm:all}
 For every $k\ge1$, $\mathcal D(3,k)=\{0,1,\dots,\lfloor(3k+4)/4\rfloor\}$, and for every $n\ge1$, $\mathcal D(n,3)=\{0,1,\dots,\lfloor(3n+4)/4\rfloor\}$.
 \end{theorem}
-The upper bound is Theorem~\ref{thm:main}, and the statement for $\mathcal D(n,3)$ follows by [B, Thm.~D].
+The upper bound is Theorem~\ref{thm:main}, and the statement for $\mathcal D(n,3)$ follows by [B, Thm.~3].
 For the lower bound we work with \emph{vertex maps}.
 A vertex map is a pair $(K,C)$, where $K$ is an oriented simplicial $2$-sphere and $C=(C_v)_{v\in K}$ are vectors in $\mathbb R^3$ with every three of them linearly independent.
 Its degree $\deg(K,C)$ is the degree of the map $|K|\to S^2$ that sends each triangle to the geodesic triangle spanned by the normalized images of its vertices.
@@ -150,12 +150,12 @@ A triangle $t=(a,b,c)$ (oriented as in $K$) is \emph{positive} or \emph{negative
 Counting preimages of a generic $u$ gives $\deg(K,C)=\sum_{t\,:\,u\in\operatorname{cone}(C_t)}\sigma_t$.
 
 \begin{lemma}[Realization]\label{lem:real}
-If $(K,C)$ is a vertex map with $V$ vertices, then $|\deg(K,C)|\in\mathcal D(3,V-4)$.
+If $(K,C)$ is a vertex map with $V\ge5$ vertices, then $|\deg(K,C)|\in\mathcal D(3,V-4)$, realized by a system with $N=V$ monomials.
 \end{lemma}
 \begin{proof}
 By Steinitz's theorem $K$ is the boundary complex of a simplicial $3$-polytope with vertex set $\A$, $|\A|=V$. A small perturbation of the vertices keeps this, and makes $(U_A)$ hold.
-Orient $\partial P$ as a boundary, replacing $C$ by its mirror image if the orientation of $K$ is the opposite one; this changes only the sign of the degree.
-$(U_C)$ holds because every three columns are independent, so $(U_A)$, $(U_C)$ and (H) hold. By [B, Lemma~2.1], $\deg F=\pm\deg(K,C)$.
+The identification $|K|\cong\partial P$ preserves or reverses orientation, which only affects the sign of the degree.
+$(U_C)$ holds because every three columns are independent, so $(U_A)$, $(U_C)$ and (H) hold. By [B, Lemma~1.1], $\deg F=\pm\deg(K,C)$.
 \end{proof}
 
 \begin{lemma}[Gluing]\label{lem:glue}
@@ -190,14 +190,28 @@ C^G=\bigl((6,-15,2),(16,-15,-7),(-10,-20,13),(18,11,3),(-1,3,-10),(12,14,12),(-7
 Exact computation shows that every triple of the $C^G_v$ is independent, $\deg(K_G,C^G)=3$, and $(0,3,4)$ is the only negative triangle.
 
 \begin{proof}[Proof of Theorem~\ref{thm:all}]
-\emph{Base cases.} For $V_0=5,6,7,8$ there are vertex maps of degree $\lfloor(3V_0-8)/4\rfloor=1,2,3,4$: the systems of \S3 and \S4 for $V_0=7,8$, and explicit ones in the repository for $V_0=5,6$.
-\emph{Induction.} Given a vertex map of degree $d>0$ on $V$ vertices, some triangle is positive. Gluing the gadget along its negative triangle (Lemma~\ref{lem:glue}) gives a vertex map of degree $d+3$ on $V+4$ vertices, and it again has positive triangles. Since $\lfloor(3(V+4)-8)/4\rfloor=\lfloor(3V-8)/4\rfloor+3$, induction from the base cases gives vertex maps attaining the bound for every $V\ge5$.
+\emph{Base cases.} For $V_0=4,5,6,7$ the following vertex maps have degree $\lfloor(3V_0-8)/4\rfloor=1,1,2,3$ (verified exactly; every triple of columns is independent):
+\begin{itemize}
+\item[$V_0=4$:] triangles $(0,1,2),(0,3,1),(1,3,2),(0,2,3)$, degree $1$, with
+\[C=\bigl((1,0,0),(0,1,0),(0,0,1),(-1,-2,-3)\bigr);\]
+\item[$V_0=5$:] triangles $(0,1,3),(1,2,3),(2,0,3),(1,0,4),(2,1,4),(0,2,4)$, degree $1$, with
+\[C=\bigl((1,0,1),(1,-2,-2),(0,1,0),(1,-1,0),(-2,0,2)\bigr);\]
+\item[$V_0=6$:] triangles $(0,1,4),(1,2,4),(2,3,4),(3,0,4),(1,0,5),(2,1,5),(3,2,5),(0,3,5)$, degree $2$, with
+\[C=\bigl((-1,1,-2),(1,1,1),(1,0,-2),(-2,2,1),(1,-2,2),(-1,-2,0)\bigr);\]
+\item[$V_0=7$:] the gadget $(K_G,C^G)$, degree $3$.
+\end{itemize}
+(The systems of \S3 and \S4 give further examples for $V=7,8$; they are not needed for the proof.)
+\emph{Induction.} Given a vertex map of degree $d>0$ on $V$ vertices, some triangle is positive, since otherwise every term of the counting formula would be $\le0$. Gluing the gadget along its negative triangle (Lemma~\ref{lem:glue}) gives a vertex map of degree $d+3$ on $V+4$ vertices, and it again has positive triangles. Since $\lfloor(3(V+4)-8)/4\rfloor=\lfloor(3V-8)/4\rfloor+3$, induction from the base cases gives vertex maps attaining the bound for every $V\ge4$, in particular for every $V\ge5$. For instance, the tetrahedron glued with the gadget gives a degree-$4$ vertex map on $8$ vertices with all twelve triangles positive, whose complex is the $(5,5,5,5,5,5,3,3)$ triangulation of \S4; so the gadget is that complex with a valence-$3$ vertex removed.
 \emph{Conclusion.} Lemma~\ref{lem:real} gives $\max\mathcal D(3,k)=\lfloor(3k+4)/4\rfloor$. Since $\mathcal D(3,k-1)\subseteq\mathcal D(3,k)$ (Remark~4), and the maximum increases by at most $1$ when $k$ increases by $1$, we get $\mathcal D(3,k)=\{0,\dots,\lfloor(3k+4)/4\rfloor\}$ by induction on $k$, starting from $\mathcal D(3,1)=\{0,1\}$.
 \end{proof}
 
 \begin{remark}
-The construction is explicit. For $N=5,\dots,16$ we built the polynomial systems: exponents are realized by placing a flat copy of the gadget's polytope as a cap over the glued facet. Each system was verified exactly with [B, Thm.~2.3], and gives $|\deg F|=1,2,3,4,4,5,6,7,7,8,9,10$. For $N=10,11,16$ the separately written verifier agrees.
-The data are in the repository (\texttt{data/sharp\_family.json}).
+The construction is explicit. For $N=5,\dots,16$ we built the polynomial systems: exponents are realized by placing a flat copy of the gadget's polytope as a cap over the glued facet. Each system was verified exactly with [B, Thm.~1.3], and gives $|\deg F|=1,2,3,4,4,5,6,7,7,8,9,10$. For $N=10,11,16$ the separately written verifier agrees.
+All data are in the repository (file \texttt{sharp\_family.json}).
+\end{remark}
+
+\begin{remark}[Related work]
+For \emph{simplicial} maps $S^2\to\partial\Delta^3$, Madahar and Sarkaria [MS] showed that a degree-$d$ map needs $2d+2$ vertices ($d\ge3$); see also Ryabichev [R]. That problem is more rigid than ours, since our triangles may map to arbitrary geodesic triangles. Its bound $d\le(V-2)/2$ is weaker than $\lfloor(3V-8)/4\rfloor$ for $V>4$, so it neither contains nor contradicts Theorem~\ref{thm:all}.
 \end{remark}
 
 \subsection*{Acknowledgment}
@@ -205,7 +219,9 @@ The search, the proof and the verifications were carried out with the AI assista
 Code and certificates: \url{https://github.com/laughingbear/topological-degree-n3k3}.
 
 \begin{thebibliography}{9}
-\bibitem{B} F.~Bihan, \emph{Descartes' rule of signs for the topological degree}, arXiv:2611.34336 (2026).
-\bibitem{D} F.~Bihan, arXiv:2610.29808 (2026), v1 Oct.~21, v2 Nov.~25.
+\bibitem[B]{B} F.~Bihan, \emph{Descartes' rule of signs for the topological degree}, arXiv:2611.34336 (2026).
+\bibitem[D]{D} F.~Bihan, \emph{Topological degree of sparse polynomial maps}, arXiv:2610.29808 (2026), v1 Oct.~21, v2 Nov.~25.
+\bibitem[MS]{MS} Madahar and Sarkaria, Geom.\ Dedicata 84 (2001).
+\bibitem[R]{R} Ryabichev, \emph{On vertex-minimal simplicial maps to the sphere}, arXiv:2512.01137.
 \end{thebibliography}
 \end{document}
