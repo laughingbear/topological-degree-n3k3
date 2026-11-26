@@ -12,7 +12,7 @@
 
 \title{The maximal topological degree for $n=k=3$}
 \author{Laughing Bear}
-\date{November 26, 2026}
+\date{November 26, 2026 (addendum for $N=8,9$ added the same day)}
 
 \begin{document}
 \begin{abstract}
@@ -116,8 +116,28 @@ For $n=3$, $\mathcal D(3,k)$ is exactly the set of absolute degrees of vertex ma
 Every simplicial $2$-sphere is polytopal (Steinitz), and a realization can be perturbed to satisfy $(U_A)$.
 Extra points of $\A$ can be placed in the interior of $P$ with generic columns, and this does not change the degree.
 In particular $\mathcal D(3,k)\subseteq\mathcal D(3,k+1)$.
-Whether the bound of Theorem~\ref{thm:main} is attained for $N\ge8$ (e.g.\ $4\in\mathcal D(3,4)$) is open.
 \end{remark}
+
+\section{Addendum: the bound is attained for \texorpdfstring{$N=8$ and $N=9$}{N=8 and N=9}}
+Take $N=8$ and
+\[
+\A=\{(4,1,12),(7,4,18),(9,12,0),(5,19,6),(6,20,12),(10,1,8),(0,14,6),(9,0,12)\},
+\]
+\[
+C=\begin{pmatrix}
+98&-6&-37&27&-45&66&-9&-45\\
+31&-32&-15&-15&61&29&27&43\\
+-1&-34&-16&-7&19&55&100&63
+\end{pmatrix}.
+\]
+\begin{theorem}
+$(U_A)$ and $(U_C)$ hold and $\deg F=-4$. Hence $\mathcal D(3,4)=\mathcal D(3,5)=\{0,1,2,3,4\}$, and by [B, Thm.~D] also $\mathcal D(4,3)=\mathcal D(5,3)=\{0,1,2,3,4\}$.
+\end{theorem}
+Verification is as in \S3: exact evaluation of [B, Thm.~2.3] for many generic $u$ gives $-4$; the signed-area formula gives $-4$ with all twelve triangles negatively oriented; numerically $F$ has six positive zeros, each Krawczyk-certified (one of them at $x_1\approx1.33\cdot10^4$), with Jacobian signs $+,-,-,-,-,-$.
+The boundary complex is the $8$-vertex triangulation with valences $(5,5,5,5,5,5,3,3)$, and the vertex map is a $4$-sheeted branched cover with six simple branch points, which is exactly the equality case of Theorem~\ref{thm:main} applied to $-C$: all twelve triangles have the same orientation ($q=12$), and the vertex windings are $w_v=-(\mathrm{val}_v-1)/2$, i.e.\ $-2$ at the six vertices of valence $5$ and $-1$ at the two of valence $3$.
+Since $\lfloor(3N-8)/4\rfloor=4$ for $N=8,9$ and $\mathcal D(3,k)$ is monotone in $k$, the bound of Theorem~\ref{thm:main} is attained for every $N\le9$. The first open case is now $N=10$, where the bound allows $|\deg F|=5$.
+It was found by enumerating all $223{,}440$ labelled triangulations of $S^2$ on $8$ vertices (edge-flip closure) and maximising the degree over them for random vertex images.
+
 
 \subsection*{Acknowledgment}
 The search, the proof and the verifications were carried out with the AI assistant Claude (Anthropic). An independent re-verification was done in a separate session with independently written code.

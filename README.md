@@ -1,6 +1,6 @@
 # The maximal topological degree for n = k = 3
 
-**Result:** D(3,3) = {0, 1, 2, 3}.
+**Result:** D(3,3) = {0, 1, 2, 3}. **Addendum:** D(3,4) = D(3,5) = {0, …, 4}, so the new bound is sharp for every N ≤ 9.
 
 This answers the first open case in F. Bihan, *Descartes' rule of signs for the topological degree* ([arXiv:2611.34336](https://arxiv.org/abs/2611.34336), §6). The same question appeared earlier in [arXiv:2610.29808](https://arxiv.org/abs/2610.29808) v1, Oct 21, 2026.
 
@@ -34,6 +34,23 @@ C = [ -2   2  -7   9   3  -4    2 ]
 ```
 
 The system is in [data/system_deg3.json](data/system_deg3.json). Systems with the same exponents and |deg F| = 0, 1, 2 are in [data/small_examples.json](data/small_examples.json). So every value in {0, 1, 2, 3} has an explicit, exactly verified example.
+
+## Addendum (same day): the bound is attained for N = 8 and N = 9
+
+The system in [data/system_N8_deg4.json](data/system_N8_deg4.json) has n = 3 and N = 8 monomials, with (U_A) and (U_C). Its degree is **deg F = −4**:
+- The exact Theorem A computation gives −4.
+- The signed-area formula gives −4, with all 12 triangles negatively oriented.
+- Numerically there are 6 positive zeros, each Krawczyk-certified (one at x₁ ≈ 1.33·10⁴), with Jacobian signs +,−,−,−,−,−.
+
+So **D(3,4) = D(3,5) = {0, …, 4}**, and by H-duality D(4,3) = D(5,3) = {0, …, 4}. The bound ⌊(3N−8)/4⌋ is therefore attained for every N ≤ 9. The first open case is N = 10, where it allows |deg F| = 5.
+
+The boundary complex is the 8-vertex triangulation with valences (5,5,5,5,5,5,3,3). The vertex map is a 4-sheeted branched cover with vertex windings −2 at the six valence-5 vertices and −1 at the two valence-3 vertices, which is exactly the equality case of the proof. It was found by enumerating all 223,440 labelled triangulations of S² on 8 vertices and, for random vertex images, maximising the degree over all of them ([verify/search_n8.py](verify/search_n8.py)).
+
+```sh
+python3 verify/verify_exact.py data/system_N8_deg4.json
+python3 verify/indep_verify.py data/system_N8_deg4.json
+python3 verify/roots_krawczyk.py data/system_N8_deg4.json 20000
+```
 
 ## Verification
 

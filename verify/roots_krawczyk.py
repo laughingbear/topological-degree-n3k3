@@ -13,6 +13,7 @@ import mpmath
 from mpmath import iv, mpf
 
 S = json.load(open(sys.argv[1])); A = np.array(S['A'], float); C = np.array(S['C'], float)
+A = A - np.round(A.mean(0))   # integer recentring: multiplies F by a monomial, same positive zeros
 nstart = int(sys.argv[2]) if len(sys.argv) > 2 else 20000
 N, n = A.shape
 def soft(z):
@@ -33,7 +34,7 @@ def polish(z0):
     for _ in range(8):  # Newton polish
         try: z = z - np.linalg.solve(Jh(z), Fh(z))
         except np.linalg.LinAlgError: return None
-    if np.linalg.norm(Fh(z)) < 1e-13 and np.all(np.isfinite(z)) and np.abs(z).max() < 60: return z
+    if np.linalg.norm(Fh(z)) < 1e-11 and np.all(np.isfinite(z)) and np.abs(z).max() < 60: return z
     return None
 # vertices of P for moment-map sampling
 from scipy.spatial import ConvexHull
@@ -41,7 +42,7 @@ H = ConvexHull(A); Vx = A[H.vertices]
 hits_per_start = []
 for t in range(nstart):
     if t % 2 == 0:
-        z0 = rng.uniform(-6, 6, n)
+        z0 = rng.uniform(-12, 12, n)
     else:
         w = rng.dirichlet(np.full(len(Vx), 0.3)); q = w @ Vx
         f = lambda z: np.log(np.exp(A @ z - (A @ z).max()).sum()) + (A @ z).max() - q @ z
