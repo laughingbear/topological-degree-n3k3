@@ -1,5 +1,7 @@
 # The maximal topological degree for n = k = 3
 
+> **New (2026-11-26): the case n = k = 4.** D(4,4) = {0, 1, …, 6}: the maximal topological degree with n = 4 variables and N = 9 monomials is 6 (Bihan's bound is 13). Explicit system, computer-assisted upper bound with checked proofs, and an independent review are in [n4k4/](n4k4/README.md).
+
 **Main result (version 3):** for every k ≥ 1,
 
   **D(3,k) = {0, 1, …, ⌊(3k+4)/4⌋}**, and, by Bihan's H-duality, **D(n,3) = {0, 1, …, ⌊(3n+4)/4⌋}** for every n ≥ 1.
