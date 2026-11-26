@@ -1,6 +1,16 @@
 # The maximal topological degree for n = k = 3
 
-**Result:** D(3,3) = {0, 1, 2, 3}. **Addendum:** D(3,4) = D(3,5) = {0, …, 4}, so the new bound is sharp for every N ≤ 9.
+**Main result (version 3):** for every k ≥ 1,
+
+  **D(3,k) = {0, 1, …, ⌊(3k+4)/4⌋}**, and, by Bihan's H-duality, **D(n,3) = {0, 1, …, ⌊(3n+4)/4⌋}** for every n ≥ 1.
+
+So the maximal topological degree for n = 3 with N monomials is exactly ⌊(3N−8)/4⌋.
+- The upper bound is a Gauss–Bonnet argument.
+- The lower bound comes from base cases N = 5…8 plus a 7-vertex "gadget" glued on repeatedly. Degree is additive under gluing along a triangle, and each gadget adds 4 monomials and raises the degree by 3.
+- Explicit systems attaining the bound for N = 5…16, all exactly verified, are in [data/sharp_family.json](data/sharp_family.json). Check them with `python3 verify/verify_family.py`.
+- The gadget is [data/gadget.json](data/gadget.json); check it with `python3 verify/gadget_exact.py data/gadget.json`.
+
+History: D(3,3) = {0,1,2,3} (v1), then the N = 8, 9 addendum (v2), then all N (v3), all on 2026-11-26.
 
 This answers the first open case in F. Bihan, *Descartes' rule of signs for the topological degree* ([arXiv:2611.34336](https://arxiv.org/abs/2611.34336), §6). The same question appeared earlier in [arXiv:2610.29808](https://arxiv.org/abs/2610.29808) v1, Oct 21, 2026.
 
