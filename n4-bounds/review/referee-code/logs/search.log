@@ -1,0 +1,46 @@
+cyclic C(7,4): V=7 E=21 F=14 restarts=377 best deg=3 q=0 4deg-bound=-5.5 (exact recheck deg=3 q=0 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.7e-07 sum_wv=14 sum_we=28 Dmax=0.200
+cyclic C(9,4): V=9 E=36 F=27 restarts=283 best deg=6 q=0 4deg-bound=-12.0 (exact recheck deg=6 q=0 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=5.0e-06 sum_wv=27 sum_we=54 Dmax=0.192
+cyclic C(11,4): V=11 E=55 F=44 restarts=218 best deg=10 q=0 4deg-bound=-20.5 (exact recheck deg=10 q=0 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.7e-07 sum_wv=44 sum_we=88 Dmax=0.194
+cyclic C(13,4): V=13 E=78 F=65 restarts=183 best deg=15 q=0 4deg-bound=-31.0 (exact recheck deg=15 q=0 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=9.2e-06 sum_wv=65 sum_we=130 Dmax=0.150
+cyclic C(8,4): V=8 E=28 F=20 restarts=317 best deg=3 q=8 4deg-bound=-10.0 (exact recheck deg=3 q=8 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=9.5e-07 sum_wv=12 sum_we=16 Dmax=0.454
+cyclic C(10,4): V=10 E=45 F=35 restarts=245 best deg=6 q=13 4deg-bound=-17.0 (exact recheck deg=6 q=13 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=6.6e-06 sum_wv=24 sum_we=33 Dmax=0.491
+cyclic C(12,4): V=12 E=66 F=54 restarts=196 best deg=8 q=22 4deg-bound=-32.0 (exact recheck deg=8 q=22 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=4.9e-06 sum_wv=31 sum_we=41 Dmax=0.457
+random V=12: V=12 E=52 F=40 restarts=231 best deg=7 q=10 4deg-bound=-21.0 (exact recheck deg=7 q=10 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.1e-06 sum_wv=29 sum_we=49 Dmax=0.492
+random V=10: V=10 E=37 F=27 restarts=278 best deg=5 q=8 4deg-bound=-11.5 (exact recheck deg=5 q=8 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.8e-06 sum_wv=20 sum_we=31 Dmax=0.468
+random V=9: V=9 E=30 F=21 restarts=312 best deg=4 q=7 4deg-bound=-7.5 (exact recheck deg=4 q=7 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=1.0e-06 sum_wv=16 sum_we=23 Dmax=0.329
+random V=6: V=6 E=15 F=9 restarts=410 best deg=1 q=4 4deg-bound=-4.5 (exact recheck deg=1 q=4 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=2.8e-06 sum_wv=4 sum_we=5 Dmax=0.335
+random V=12: V=12 E=48 F=36 restarts=250 best deg=7 q=11 4deg-bound=-14.5 (exact recheck deg=7 q=11 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=2.9e-07 sum_wv=28 sum_we=42 Dmax=0.468
+random V=7: V=7 E=19 F=12 restarts=383 best deg=2 q=4 4deg-bound=-4.5 (exact recheck deg=2 q=4 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=1.1e-06 sum_wv=8 sum_we=12 Dmax=0.493
+random V=10: V=10 E=37 F=27 restarts=291 best deg=6 q=3 4deg-bound=-10.0 (exact recheck deg=6 q=3 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.6e-06 sum_wv=27 sum_we=48 Dmax=0.486
+random V=6: V=6 E=15 F=9 restarts=402 best deg=1 q=4 4deg-bound=-4.5 (exact recheck deg=1 q=4 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=1.6e-06 sum_wv=4 sum_we=5 Dmax=0.377
+random V=6: V=6 E=15 F=9 restarts=411 best deg=1 q=4 4deg-bound=-4.5 (exact recheck deg=1 q=4 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=4.0e-06 sum_wv=4 sum_we=5 Dmax=0.332
+random V=9: V=9 E=30 F=21 restarts=311 best deg=5 q=4 4deg-bound=-5.0 (exact recheck deg=5 q=4 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.0e-06 sum_wv=21 sum_we=34 Dmax=0.379
+random V=12: V=12 E=47 F=35 restarts=247 best deg=7 q=6 4deg-bound=-15.5 (exact recheck deg=7 q=6 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.5e-06 sum_wv=31 sum_we=54 Dmax=0.497
+random V=10: V=10 E=39 F=29 restarts=281 best deg=5 q=11 4deg-bound=-13.0 (exact recheck deg=5 q=11 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=3.7e-07 sum_wv=19 sum_we=26 Dmax=0.490
+random V=10: V=10 E=36 F=26 restarts=298 best deg=5 q=7 4deg-bound=-10.5 (exact recheck deg=5 q=7 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=9.5e-07 sum_wv=20 sum_we=32 Dmax=0.496
+random V=12: V=12 E=49 F=37 restarts=256 best deg=7 q=11 4deg-bound=-16.0 (exact recheck deg=7 q=11 bound holds=True) same-sign refinement violations=0 | full analyse ok=True idErr=2.1e-06 sum_wv=29 sum_we=44 Dmax=0.435
+record maps fully analysed: 21  failures: 0  degrees: [3, 6, 10, 15, 3, 6, 8, 7, 5, 4, 1, 7, 2, 6, 1, 1, 5, 7, 5, 5, 7]
+max D_t over 300 random Gaussian bases: 0.499918
+Traceback (most recent call last):
+  File "/home/claude/mycode/search.py", line 164, in <module>
+    res = minimize(lambda x: -D_of(x), x0, method="Nelder-Mead", options=dict(maxiter=300))
+  File "/usr/local/lib/python3.13/site-packages/scipy/optimize/_minimize.py", line 772, in minimize
+    res = _minimize_neldermead(fun, x0, args, callback, bounds=bounds,
+                               **options)
+  File "/usr/local/lib/python3.13/site-packages/scipy/optimize/_optimize.py", line 914, in _minimize_neldermead
+    fxcc = func(xcc)
+  File "/usr/local/lib/python3.13/site-packages/scipy/optimize/_optimize.py", line 561, in function_wrapper
+    fx = function(np.copy(x), *(wrapper_args + args))
+  File "/home/claude/mycode/search.py", line 164, in <lambda>
+    res = minimize(lambda x: -D_of(x), x0, method="Nelder-Mead", options=dict(maxiter=300))
+                              ~~~~^^^
+  File "/home/claude/mycode/search.py", line 106, in D_of
+    tot += multivariate_normal.cdf(np.zeros(4), mean=np.zeros(4), cov=R, abseps=1e-7, releps=1e-7)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/scipy/stats/_multivariate.py", line 793, in cdf
+    params = self._process_parameters(mean, cov, allow_singular)
+  File "/usr/local/lib/python3.13/site-packages/scipy/stats/_multivariate.py", line 479, in _process_parameters
+    psd = _PSD(cov, allow_singular=allow_singular)
+  File "/usr/local/lib/python3.13/site-packages/scipy/stats/_multivariate.py", line 225, in __init__
+    raise np.linalg.LinAlgError(msg)
+numpy.linalg.LinAlgError: When `allow_singular is False`, the input matrix must be symmetric positive definite.

@@ -1,0 +1,33 @@
+5 facets 5 all same sign, deg = 1  upper bound on this sphere: deg < 1.25  general bound < 1.25
+7 facets 14 all same sign, deg = 3  upper bound on this sphere: deg < 3.5  general bound < 4.375
+9 facets 27 all same sign, deg = 6  upper bound on this sphere: deg < 6.75  general bound < 9.0
+11 facets 44 all same sign, deg = 10  upper bound on this sphere: deg < 11.0  general bound < 15.125
+13 facets 65 all same sign, deg = 15  upper bound on this sphere: deg < 16.25  general bound < 22.75
+15 facets 90 all same sign, deg = 21  upper bound on this sphere: deg < 22.5  general bound < 31.875
+17 facets 119 all same sign, deg = 28  upper bound on this sphere: deg < 29.75  general bound < 42.5
+19 facets 152 all same sign, deg = 36  upper bound on this sphere: deg < 38.0  general bound < 54.625
+21 facets 189 all same sign, deg = 45  upper bound on this sphere: deg < 47.25  general bound < 68.25
+23 facets 230 all same sign, deg = 55  upper bound on this sphere: deg < 57.5  general bound < 83.375
+25 facets 275 all same sign, deg = 66  upper bound on this sphere: deg < 68.75  general bound < 100.0
+27 facets 324 all same sign, deg = 78  upper bound on this sphere: deg < 81.0  general bound < 118.125
+29 facets 377 all same sign, deg = 91  upper bound on this sphere: deg < 94.25  general bound < 137.75
+31 facets 434 all same sign, deg = 105  upper bound on this sphere: deg < 108.5  general bound < 158.875
+33 facets 495 all same sign, deg = 120  upper bound on this sphere: deg < 123.75  general bound < 181.5
+35 facets 560 all same sign, deg = 136  upper bound on this sphere: deg < 140.0  general bound < 205.625
+37 facets 629 all same sign, deg = 153  upper bound on this sphere: deg < 157.25  general bound < 231.25
+39 facets 702 all same sign, deg = 171  upper bound on this sphere: deg < 175.5  general bound < 258.375
+41 facets 779 all same sign, deg = 190  upper bound on this sphere: deg < 194.75  general bound < 287.0
+43 facets 860 all same sign, deg = 210  upper bound on this sphere: deg < 215.0  general bound < 317.125
+45 facets 945 all same sign, deg = 231  upper bound on this sphere: deg < 236.25  general bound < 348.75
+47 facets 1034 all same sign, deg = 253  upper bound on this sphere: deg < 258.5  general bound < 381.875
+49 facets 1127 all same sign, deg = 276  upper bound on this sphere: deg < 281.75  general bound < 416.5
+51 facets 1224 all same sign, deg = 300  upper bound on this sphere: deg < 306.0  general bound < 452.625
+53 facets 1325 all same sign, deg = 325  upper bound on this sphere: deg < 331.25  general bound < 490.25
+55 facets 1430 all same sign, deg = 351  upper bound on this sphere: deg < 357.5  general bound < 529.375
+57 facets 1539 all same sign, deg = 378  upper bound on this sphere: deg < 384.75  general bound < 570.0
+59 facets 1652 all same sign, deg = 406  upper bound on this sphere: deg < 413.0  general bound < 612.125
+61 facets 1769 all same sign, deg = 435  upper bound on this sphere: deg < 442.25  general bound < 655.75
+
+real	0m0.692s
+user	0m0.461s
+sys	0m0.020s

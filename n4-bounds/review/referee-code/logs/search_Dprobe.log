@@ -1,0 +1,6 @@
+max D_t over 300 random Gaussian bases: 0.498693
+eps=0.1: D = 0.419853
+eps=0.01: D = 0.473590
+eps=0.001: D = 0.491612
+eps=0.0001: D = 0.497346
+eps=1e-06: D = 0.499735

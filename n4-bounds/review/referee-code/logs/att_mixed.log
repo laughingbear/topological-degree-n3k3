@@ -1,0 +1,51 @@
+deg9 sphere101272: V=10 E=40 F=30 p=30 q=0 deg=9 (MC vol 9.000)  sum w_v=40  sum w_e=70  Gram: 40 = 40  X=4.000 Y=0.000  sum_w - X + Y = 36.000 vs 4deg=36  Dmax=0.298  bound 4deg < 40.0  OK
+deg8 N=10: V=10 E=39 F=29 p=27 q=2 deg=8 (MC vol 8.000)  sum w_v=35  sum w_e=60  Gram: 35 = 35  X=3.574 Y=0.574  sum_w - X + Y = 32.000 vs 4deg=32  Dmax=0.307  bound 4deg < 37.5  OK
+D45 family deg 0: V=10 E=39 F=29 p=9 q=20 deg=0 (MC vol 0.000)  sum w_v=-4  sum w_e=-15  Gram: -4 = -4  X=1.887 Y=5.887  sum_w - X + Y = -0.000 vs 4deg=0  Dmax=0.469  bound 4deg < 28.5  OK
+D45 family deg 1: V=10 E=39 F=29 p=20 q=9 deg=1 (MC vol 1.000)  sum w_v=7  sum w_e=18  Gram: 7 = 7  X=4.267 Y=1.267  sum_w - X + Y = 4.000 vs 4deg=4  Dmax=0.478  bound 4deg < 34.0  OK
+D45 family deg 2: V=10 E=39 F=29 p=19 q=10 deg=2 (MC vol 2.000)  sum w_v=10  sum w_e=19  Gram: 10 = 10  X=4.483 Y=2.483  sum_w - X + Y = 8.000 vs 4deg=8  Dmax=0.475  bound 4deg < 33.5  OK
+D45 family deg 3: V=10 E=39 F=29 p=22 q=7 deg=3 (MC vol 3.000)  sum w_v=15  sum w_e=30  Gram: 15 = 15  X=3.929 Y=0.929  sum_w - X + Y = 12.000 vs 4deg=12  Dmax=0.389  bound 4deg < 35.0  OK
+D45 family deg 4: V=10 E=39 F=29 p=21 q=8 deg=4 (MC vol 4.000)  sum w_v=17  sum w_e=30  Gram: 17 = 17  X=3.539 Y=2.539  sum_w - X + Y = 16.000 vs 4deg=16  Dmax=0.477  bound 4deg < 34.5  OK
+D45 family deg 5: V=10 E=39 F=29 p=24 q=5 deg=5 (MC vol 5.000)  sum w_v=23  sum w_e=42  Gram: 23 = 23  X=3.770 Y=0.770  sum_w - X + Y = 20.000 vs 4deg=20  Dmax=0.392  bound 4deg < 36.0  OK
+D45 family deg 6: V=10 E=39 F=29 p=25 q=4 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=48  Gram: 27 = 27  X=3.663 Y=0.663  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.298  bound 4deg < 36.5  OK
+D45 family deg 7: V=10 E=39 F=29 p=26 q=3 deg=7 (MC vol 7.000)  sum w_v=31  sum w_e=54  Gram: 31 = 31  X=3.655 Y=0.655  sum_w - X + Y = 28.000 vs 4deg=28  Dmax=0.313  bound 4deg < 37.0  OK
+D45 family deg 8: V=10 E=39 F=29 p=27 q=2 deg=8 (MC vol 8.000)  sum w_v=35  sum w_e=60  Gram: 35 = 35  X=3.574 Y=0.574  sum_w - X + Y = 32.000 vs 4deg=32  Dmax=0.306  bound 4deg < 37.5  OK
+deg6 sys 15: V=9 E=33 F=24 p=21 q=3 deg=6 (MC vol 6.000)  sum w_v=26  sum w_e=44  Gram: 26 = 26  X=2.702 Y=0.702  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.268  bound 4deg < 30.0  OK
+deg6 sys 19: V=9 E=33 F=24 p=24 q=0 deg=6 (MC vol 6.000)  sum w_v=28  sum w_e=52  Gram: 28 = 28  X=4.000 Y=0.000  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.282  bound 4deg < 31.5  OK
+deg6 sys 60: V=9 E=34 F=25 p=23 q=2 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=48  Gram: 27 = 27  X=3.492 Y=0.492  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.351  bound 4deg < 32.0  OK
+deg6 sys 101: V=9 E=32 F=23 p=22 q=1 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=48  Gram: 27 = 27  X=3.119 Y=0.119  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.334  bound 4deg < 29.5  OK
+deg6 sys 211: V=9 E=36 F=27 p=27 q=0 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=54  Gram: 27 = 27  X=3.000 Y=0.000  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.231  bound 4deg < 36.0  OK
+deg6 sys 244: V=9 E=32 F=23 p=22 q=1 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=48  Gram: 27 = 27  X=3.212 Y=0.212  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.296  bound 4deg < 29.5  OK
+deg6 sys 353: V=9 E=35 F=26 p=24 q=2 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=49  Gram: 27 = 27  X=3.498 Y=0.498  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.424  bound 4deg < 33.5  OK
+deg6 sys 702: V=9 E=31 F=22 p=20 q=2 deg=6 (MC vol 6.000)  sum w_v=26  sum w_e=44  Gram: 26 = 26  X=2.487 Y=0.487  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.283  bound 4deg < 27.5  OK
+deg6 sys 895: V=9 E=33 F=24 p=23 q=1 deg=6 (MC vol 6.000)  sum w_v=27  sum w_e=49  Gram: 27 = 27  X=3.466 Y=0.466  sum_w - X + Y = 24.000 vs 4deg=24  Dmax=0.466  bound 4deg < 31.0  OK
+random 0: V=11 E=42 F=31 p=16 q=15 deg=0 (MC vol -0.000)  sum w_v=1  sum w_e=2  Gram: 1 = 1  X=3.912 Y=2.912  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.489  bound 4deg < 33.5  OK
+random 1: V=7 E=19 F=12 p=6 q=6 deg=0 (MC vol -0.000)  sum w_v=0  sum w_e=0  Gram: 0 = 0  X=1.262 Y=1.262  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.498  bound 4deg < 11.5  OK
+random 2: V=12 E=48 F=36 p=20 q=16 deg=1 (MC vol 1.000)  sum w_v=5  sum w_e=9  Gram: 5 = 5  X=4.630 Y=3.630  sum_w - X + Y = 4.000 vs 4deg=4  Dmax=0.497  bound 4deg < 40.0  OK
+random 3: V=7 E=20 F=13 p=4 q=9 deg=0 (MC vol -0.000)  sum w_v=-1  sum w_e=-6  Gram: -1 = -1  X=1.178 Y=2.178  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.349  bound 4deg < 11.5  OK
+random 4: V=11 E=43 F=32 p=12 q=20 deg=0 (MC vol -0.000)  sum w_v=-2  sum w_e=-10  Gram: -2 = -2  X=3.671 Y=5.671  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.491  bound 4deg < 32.5  OK
+random 5: V=12 E=48 F=36 p=18 q=18 deg=0 (MC vol -0.000)  sum w_v=0  sum w_e=0  Gram: 0 = 0  X=4.364 Y=4.364  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.499  bound 4deg < 39.0  OK
+random 6: V=6 E=15 F=9 p=5 q=4 deg=0 (MC vol 0.000)  sum w_v=0  sum w_e=1  Gram: 0 = 0  X=1.241 Y=1.241  sum_w - X + Y = -0.000 vs 4deg=0  Dmax=0.490  bound 4deg < 8.5  OK
+random 7: V=7 E=19 F=12 p=4 q=8 deg=0 (MC vol -0.000)  sum w_v=-1  sum w_e=-5  Gram: -1 = -1  X=0.928 Y=1.928  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.418  bound 4deg < 10.5  OK
+random 8: V=13 E=55 F=42 p=23 q=19 deg=0 (MC vol 0.000)  sum w_v=1  sum w_e=5  Gram: 1 = 1  X=5.458 Y=4.458  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.458  bound 4deg < 47.0  OK
+random 9: V=6 E=15 F=9 p=5 q=4 deg=0 (MC vol 0.000)  sum w_v=0  sum w_e=1  Gram: 0 = 0  X=1.285 Y=1.285  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.498  bound 4deg < 8.5  OK
+random 10: V=12 E=48 F=36 p=23 q=13 deg=1 (MC vol 1.000)  sum w_v=6  sum w_e=16  Gram: 6 = 6  X=5.349 Y=3.349  sum_w - X + Y = 4.000 vs 4deg=4  Dmax=0.491  bound 4deg < 41.5  OK
+random 11: V=9 E=31 F=22 p=11 q=11 deg=0 (MC vol 0.000)  sum w_v=0  sum w_e=0  Gram: 0 = 0  X=2.838 Y=2.838  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.434  bound 4deg < 23.0  OK
+random 12: V=13 E=53 F=40 p=16 q=24 deg=0 (MC vol 0.000)  sum w_v=-2  sum w_e=-10  Gram: -2 = -2  X=4.634 Y=6.634  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.474  bound 4deg < 41.5  OK
+random 13: V=12 E=48 F=36 p=15 q=21 deg=0 (MC vol 0.000)  sum w_v=-2  sum w_e=-8  Gram: -2 = -2  X=3.356 Y=5.356  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.500  bound 4deg < 37.5  OK
+random 14: V=13 E=58 F=45 p=23 q=22 deg=0 (MC vol 0.000)  sum w_v=-1  sum w_e=0  Gram: -1 = -1  X=5.369 Y=6.369  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.493  bound 4deg < 50.0  OK
+random 15: V=7 E=20 F=13 p=7 q=6 deg=0 (MC vol 0.000)  sum w_v=0  sum w_e=1  Gram: 0 = 0  X=1.911 Y=1.911  sum_w - X + Y = -0.000 vs 4deg=0  Dmax=0.488  bound 4deg < 13.0  OK
+random 16: V=8 E=24 F=16 p=11 q=5 deg=1 (MC vol 1.000)  sum w_v=5  sum w_e=11  Gram: 5 = 5  X=2.448 Y=1.448  sum_w - X + Y = 4.000 vs 4deg=4  Dmax=0.466  bound 4deg < 17.5  OK
+random 17: V=7 E=20 F=13 p=6 q=7 deg=0 (MC vol 0.000)  sum w_v=0  sum w_e=-1  Gram: 0 = 0  X=1.705 Y=1.705  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.434  bound 4deg < 12.5  OK
+random 18: V=13 E=54 F=41 p=21 q=20 deg=0 (MC vol 0.000)  sum w_v=0  sum w_e=1  Gram: 0 = 0  X=5.446 Y=5.446  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.491  bound 4deg < 45.0  OK
+random 19: V=9 E=32 F=23 p=13 q=10 deg=0 (MC vol -0.000)  sum w_v=1  sum w_e=4  Gram: 1 = 1  X=3.636 Y=2.636  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.435  bound 4deg < 25.0  OK
+random 20: V=12 E=51 F=39 p=22 q=17 deg=0 (MC vol 0.000)  sum w_v=2  sum w_e=7  Gram: 2 = 2  X=5.676 Y=3.676  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.461  bound 4deg < 44.0  OK
+random 21: V=9 E=33 F=24 p=12 q=12 deg=0 (MC vol -0.000)  sum w_v=-1  sum w_e=-1  Gram: -1 = -1  X=2.198 Y=3.198  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.467  bound 4deg < 25.5  OK
+random 22: V=6 E=15 F=9 p=5 q=4 deg=0 (MC vol -0.000)  sum w_v=0  sum w_e=1  Gram: 0 = 0  X=0.844 Y=0.844  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.331  bound 4deg < 8.5  OK
+random 23: V=6 E=15 F=9 p=2 q=7 deg=0 (MC vol -0.000)  sum w_v=-1  sum w_e=-6  Gram: -1 = -1  X=0.481 Y=1.481  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.355  bound 4deg < 7.0  OK
+random 24: V=12 E=48 F=36 p=19 q=17 deg=1 (MC vol 1.000)  sum w_v=4  sum w_e=6  Gram: 4 = 4  X=4.446 Y=4.446  sum_w - X + Y = 4.000 vs 4deg=4  Dmax=0.472  bound 4deg < 39.5  OK
+random 25: V=11 E=43 F=32 p=24 q=8 deg=0 (MC vol -0.000)  sum w_v=4  sum w_e=20  Gram: 4 = 4  X=6.175 Y=2.175  sum_w - X + Y = -0.000 vs 4deg=0  Dmax=0.483  bound 4deg < 38.5  OK
+random 26: V=9 E=31 F=22 p=9 q=13 deg=0 (MC vol 0.000)  sum w_v=-2  sum w_e=-6  Gram: -2 = -2  X=1.885 Y=3.885  sum_w - X + Y = -0.000 vs 4deg=0  Dmax=0.481  bound 4deg < 22.0  OK
+random 27: V=9 E=29 F=20 p=13 q=7 deg=0 (MC vol 0.000)  sum w_v=1  sum w_e=7  Gram: 1 = 1  X=2.845 Y=1.845  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.471  bound 4deg < 22.0  OK
+random 28: V=12 E=47 F=35 p=15 q=20 deg=0 (MC vol -0.000)  sum w_v=-1  sum w_e=-6  Gram: -1 = -1  X=4.133 Y=5.133  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.463  bound 4deg < 36.5  OK
+random 29: V=9 E=32 F=23 p=9 q=14 deg=0 (MC vol 0.000)  sum w_v=-2  sum w_e=-7  Gram: -2 = -2  X=2.006 Y=4.006  sum_w - X + Y = 0.000 vs 4deg=0  Dmax=0.479  bound 4deg < 23.0  OK
+ALL OK

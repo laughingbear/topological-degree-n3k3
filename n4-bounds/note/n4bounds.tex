@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,url,booktabs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\sgn}{\operatorname{sign}}
+\newcommand{\lk}{\operatorname{lk}}
+\title{Bounds for the topological degree of fewnomial systems\\ in four variables}
+\author{Laughing Bear}
+\date{November 27, 2026}
+\sloppy
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a polynomial map $F\colon\R^4_{>0}\to\R^4$ with $N$ monomials, generic exponents and coefficients, we prove
+\[
+\frac{(N-1)(N-3)}{8}\;\le\;\max|\deg F|\;<\;\frac{3N^2-11N}{16}\qquad(N\text{ odd}),
+\]
+and $(N-2)(N-4)/8\le\max|\deg F|$ for even $N$. The upper bound improves Bihan's bound $|\deg F|<N(N-3)/4$ for $N\ge 9$; the lower bound shows that the maximum grows like $cN^2$ with $1/8\le c\le 3/16$. The upper bound rests on an exact identity, valid in every dimension, between the degree of a piecewise linear map of a triangulated sphere, the degrees of its vertex links, and the measures of certain orthants. The lower bound is an explicit family on cyclic polytopes, with coefficients on the symmetric moment curve $(\cos t,\sin t,\cos 3t,\sin 3t)$.
+\end{abstract}
+
+\section{Setting}
+Let $K$ be a simplicial $3$-sphere with $V$ vertices, $E$ edges and $F$ facets ($3$-simplices). Euler's formula and the fact that every triangle lies in two facets give $F=E-V$.
+
+A \emph{vertex map} is a choice of vectors $C_v\in\R^4$, one for each vertex, such that the four vectors of every facet are linearly independent. Extending linearly on each facet and projecting radially gives a continuous map $f\colon|K|\to S^3$, which sends the facet $t$ homeomorphically onto the spherical simplex $S^3\cap\overline{\cone(t)}$, where $\cone(t)=\{\sum_{k\in t}c_kC_k: c_k>0\}$.
+
+Fix an orientation of $K$, that is, signs $o_t$ for the facets with sorted vertices. The \emph{sign} of a facet is $s_t=o_t\cdot\sgn\det(C_{t_1},\dots,C_{t_4})$; let $p$ and $q$ be the numbers of facets with $s_t=+1$ and $s_t=-1$. The degree of $f$ is
+\begin{equation}\label{eq:count}
+\deg=\sum_{t\,:\,u\in\cone(t)}s_t\qquad\text{for every $u$ outside the cones of all triangles.}
+\end{equation}
+
+\emph{Links.} For a vertex $v$, orient $\lk(v)$ by putting $v$ first, and orient $C_v^\perp$ so that $(C_v,\text{basis})$ is positive. Projecting the vectors of the neighbours of $v$ to $C_v^\perp\cong\R^3$ gives a vertex map on the $2$-sphere $\lk(v)$, in which the triangle $t\setminus v$ has sign $s_t$, because $\det(C_v,C_a,C_b,C_c)=|C_v|\det{}_3(PC_a,PC_b,PC_c)$. Its degree is the \emph{link degree} $w_v$. For an edge $e$, let $w_e$ be the integer defined by
+\[
+2\pi\,w_e=\sum_{t\supset e}s_t\,\theta_t(e),
+\]
+where $\theta_t(e)\in(0,\pi)$ is the dihedral angle of the spherical simplex of $t$ at $e$; it is the winding number of the projection of the link cycle of $e$ to $\operatorname{span}(C_a,C_b)^\perp$. Let $p_e$ be the number of positive facets containing $e$ and $m_e$ the number of all facets containing $e$.
+
+Let $\mu$ be the rotation invariant probability measure on $S^3$ (equivalently, the standard Gaussian measure on $\R^4$, since only cones are measured).
+
+\medskip\noindent\emph{Connection with polynomial systems.} Let $F=(f_1,\dots,f_4)$, $f_i=\sum_{j=1}^Nc_{ij}x^{a_j}$, with all maximal minors of $C=(c_{ij})$ and of the matrix $\hat A$ with columns $(1,a_j)$ nonzero. Bihan \cite{D,B} proves that $F\colon\R^4_{>0}\to\R^4$ has a well defined topological degree, that it equals, up to a global sign, the degree of the vertex map $v\mapsto C_v$ on the boundary complex of the Newton polytope $P=\operatorname{conv}(a_j)$ (which is simplicial, with $V\le N$ vertices), and that $|\deg F|<\tfrac12\min(M(4,N),M(k,N))$, where $M(d,N)$ is the maximal number of facets of a $d$-polytope with $N$ vertices and $k=N-5$ \cite[Thm.~2]{B}. For $d=4$ this reads $|\deg F|<N(N-3)/4$. He writes that for $n,k\ge3$ it is not known whether the bound is sharp. Write $\mathcal D(n,k)$ for the set of values of $|\deg F|$ for $n$ variables and $n+k+1$ monomials.
+
+\section{The upper bound}
+
+\begin{theorem}\label{thm:M}
+For every vertex map on a simplicial $3$-sphere, and either orientation,
+\[
+4\deg<2F-\frac E2-\frac q2 .
+\]
+Consequently $|\deg|<(3E-4V)/8\le(3V^2-11V)/16$.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (a pointwise count).} Let $t$ be a facet and $u=\sum_{k\in t}c_kC_k$ with all $c_k\ne0$. For $v\in t$ put $L_{t,v}=\{u: c_j>0\text{ for all }j\in t,\ j\ne v\}$. Then
+\[
+\#\{v\in t:u\in L_{t,v}\}=4\cdot[\text{all }c_k>0]+[\text{exactly one }c_k<0].
+\]
+
+\emph{Step 2 (integration).} Multiply by $s_t$, sum over $t$ and integrate against $\mu$. By \eqref{eq:count}, $\sum_ts_t\,\mu(\cone(t))=\deg$. The set $L_{t,v}$ equals $\R C_v+\cone(C_j:j\in t\setminus v)$, so $\mu(L_{t,v})$ is the normalised solid angle, in $C_v^\perp$, of the cone spanned by the projections of the other three vectors. By \eqref{eq:count} one dimension lower, $\sum_{t\ni v}s_t\,\mu(L_{t,v})=w_v$. Hence
+\begin{equation}\label{eq:identity}
+4\deg=\sum_vw_v-X+Y,\qquad X=\sum_{s_t=+1}D_t,\quad Y=\sum_{s_t=-1}D_t,
+\end{equation}
+where $D_t$ is the $\mu$-measure of the set of points with exactly one negative coordinate in the basis $C_t$.
+
+\emph{Step 3 ($0<D_t<\tfrac12$).} The $16$ open orthants of the basis $C_t$ cover $\R^4$ up to a null set. The map $u\mapsto-u$ exchanges the orthants with exactly one negative coordinate and those with exactly three, so both families have measure $D_t$. The all-positive orthant has positive measure. So $2D_t<1$.
+
+\emph{Step 4 (links).} For the vertex map on $\lk(v)$, with $p_v$ positive and $q_v$ negative triangles, the signed area formula and Girard's theorem give $4\pi w_v=\sum s\cdot(\text{angle sum}-\pi)$, and the signed angle sum at the link vertex corresponding to an edge $e\ni v$ is $2\pi w_e$. So $4w_v=2\sum_{e\ni v}w_e-(p_v-q_v)$, and summing over $v$,
+\[
+\sum_vw_v=\sum_ew_e-(p-q).
+\]
+
+\emph{Step 5 (edges).} Since all angles lie in $(0,\pi)$, $2\pi w_e<\pi p_e$, so $w_e\le(p_e-1)/2$ because $w_e$ is an integer (if $p_e=0$ then $w_e\le-1$). As $\sum_ep_e=6p$, we get $\sum_ew_e\le3p-E/2$.
+
+\emph{Step 6.} Combining, $4\deg\le2p+q-E/2-X+Y<2p+q-E/2+q/2=2F-E/2-q/2$; the strict inequality comes from $X>0$ if $q=0$ and from $Y<q/2$ otherwise. For the consequence, choose the orientation with $\deg\ge0$, drop $q$, and use $F=E-V$ and $E\le V(V-1)/2$.
+\end{proof}
+
+\begin{remark}\label{rem:refine}
+(a) If all facets have the same sign, step 5 gives the sharper bound $4\deg<\sum_e\lfloor(m_e-1)/2\rfloor-F$: every edge of even degree loses $\tfrac12$.
+
+(b) Steps 1--3 work verbatim in every dimension: for a vertex map on a simplicial $(n-1)$-sphere, $n\deg=\sum_vw_v-X+Y$ with $0<D_t<\tfrac12$. For $n=3$ the defect is explicit, $D_t=(3\pi-\text{angle sum})/4\pi$.
+
+(c) The proof does not use that $K$ is a sphere or polytopal; it holds on every closed oriented combinatorial $3$-manifold.
+\end{remark}
+
+\section{The lower bound}
+Let $V=2m+1\ge5$ be odd and let $K$ be the boundary complex of the cyclic polytope $C(V,4)$: vertices $0,\dots,V-1$, facets $\{i,i+1,j,j+1\}$ (indices mod $V$) with four distinct elements, $F=V(V-3)/2$. Let
+\[
+\gamma(t)=(\cos t,\sin t,\cos3t,\sin3t),\qquad x_i=\pi i/V,\qquad C_i=(-1)^i\gamma(x_i).
+\]
+The curve $\gamma$ is the symmetric moment curve of Barvinok and Novik \cite{BN}; since $\gamma(t+\pi)=-\gamma(t)$, the $C_i$ are the $V$ equally spaced points $\gamma(2\pi(m+1)i/V)$, taken in ``star order''. This is the analogue of Bihan's construction for $n=2$ with equally spaced points on a circle \cite[Thm.~2$'$]{B}.
+
+\begin{theorem}\label{thm:C}
+This is a vertex map, all facets have the same sign, and $|\deg|=m(m-1)/2=(V-1)(V-3)/8$.
+\end{theorem}
+
+\begin{lemma}\label{lem:det}
+$\det(\gamma(y_1),\gamma(y_2),\gamma(y_3),\gamma(y_4))=c\prod_{a<b}\sin(y_b-y_a)$ for a nonzero real constant $c$.
+\end{lemma}
+\begin{proof}
+$\gamma(t)$ is an invertible linear image of $e^{-3it}(1,z,z^2,z^3)$ with $z=e^{2it}$. In the Vandermonde determinant $\prod_{a<b}(z_b-z_a)$ write $z_b-z_a=2i\,e^{i(y_a+y_b)}\sin(y_b-y_a)$; each $y_a$ occurs in three pairs, so the exponential factors cancel against $\prod_ae^{-3iy_a}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:C}]
+For $a<b$ we have $0<x_b-x_a<\pi$, so by the Lemma every $4\times4$ minor of $C$ is nonzero.
+
+\emph{Signs.} Call a facet \emph{non-wrap} if it is $\{i,i+1,j,j+1\}$ with $0\le i$, $i+2\le j$, $j+1\le V-1$, and \emph{wrap} if it is $\{0,j,j+1,V-1\}$ with $1\le j\le V-3$. For a sorted facet $f_1<\dots<f_4$, $\sgn\det(C_f)=\sgn(c)(-1)^{f_1+f_2+f_3+f_4}$, which is $\sgn(c)$ for non-wrap facets and $-\sgn(c)$ for wrap facets ($V$ is odd). On the other hand, realising $K$ on the moment curve, the sign of the Vandermonde determinant of a sorted facet followed by another vertex $z$ is $(-1)^{\#\{k:f_k>z\}}$; it does not depend on $z$ and defines a coherent orientation, which is $+$ on non-wrap and $-$ on wrap facets. So $s_f=\sgn(c)$ for every facet.
+
+\emph{Degree.} Since all signs agree, $|\deg|$ is the number of facets $f$ with $u\in\cone(f)$. Take $u=\gamma(\tau)$ with $0<\tau<x_1$; by the Lemma it is outside the span of any three $C_i$. Writing $u=\sum_{k\in f}c_kC_k$, Cramer's rule and the Lemma give
+\[
+(-1)^kc_k=\prod_{j\in f,\,j<k}\frac{\sin(\tau-x_j)}{\sin(x_k-x_j)}\cdot\prod_{j\in f,\,j>k}\frac{\sin(x_j-\tau)}{\sin(x_j-x_k)} .
+\]
+All denominators are positive, $\sin(\tau-x_j)<0$ iff $j\ge1$, and $\sin(x_j-\tau)<0$ iff $j=0$.
+\begin{itemize}
+\item Non-wrap, $i\ge1$: the vertex in sorted position $r$ has $r-1$ negative factors, so the signs of $c_k$ are $(-1)^i,(-1)^i,(-1)^j,(-1)^j$. The facet is counted iff $i$ and $j$ are even; there are $\binom{m-1}{2}$ pairs of even numbers $2\le i<j\le2m-2$.
+\item Non-wrap, $i=0$: $c_1<0$; not counted.
+\item Wrap: the signs are $+,(-1)^j,(-1)^j,+$; counted iff $j\in\{2,4,\dots,2m-2\}$, that is $m-1$ facets.
+\end{itemize}
+The total is $\binom{m-1}{2}+(m-1)=\binom m2$.
+\end{proof}
+
+\begin{remark}
+On $\partial C(V,4)$ the $V$ edges $\{i,i+1\}$ have degree $V-2$, the $V$ edges $\{i,i+2\}$ have degree $3$ and all others have degree $4$. Remark \ref{rem:refine}(a) gives $\deg<V(V-3)/8$ for same-sign maps on this complex, so Theorem \ref{thm:C} is within $(V-3)/8$ of optimal there, and exactly optimal for $V\le11$.
+\end{remark}
+
+\section{Consequences for polynomial systems}
+\begin{corollary}\label{cor}
+Let $N=k+5$. Then $\max\mathcal D(4,k)<(3N^2-11N)/16$, and
+\[
+\max\mathcal D(4,k)\ge\frac{(N-1)(N-3)}{8}\ (N\text{ odd}),\qquad\max\mathcal D(4,k)\ge\frac{(N-2)(N-4)}{8}\ (N\text{ even}).
+\]
+By Bihan's duality \cite[Thm.~3]{B} the same bounds hold for $\mathcal D(k,4)$. In particular
+\[\tfrac18\le\liminf_N\frac{\max\mathcal D(4,N-5)}{N^2}\le\limsup_N\frac{\max\mathcal D(4,N-5)}{N^2}\le\tfrac3{16}.\]
+\end{corollary}
+\begin{proof}
+Upper bound: Theorem \ref{thm:M} for the vertex map on the boundary of the Newton polytope; the bound is increasing in $V\le N$. Lower bound, $N$ odd: exponents $a_i=(i,i^2,i^3,i^4)$ give the cyclic polytope with all maximal minors of $\hat A$ nonzero, and the coefficient matrix of Theorem \ref{thm:C} has all maximal minors nonzero. $N$ even: add to the system for $N-1$ one monomial in the interior of the Newton polytope; the degree depends only on the vertices \cite{D}.
+\end{proof}
+
+\begin{remark}[Explicit systems]
+The repository contains integer systems for $N=5,\dots,14$ (coefficients $10^6C_i$ rounded), each verified exactly with \cite[Thm.~1.3]{B}: $|\deg F|=1,1,3,3,6,6,10,10,15,15$.
+\end{remark}
+
+\begin{table}[h]\centering
+\begin{tabular}{rcccc}\toprule
+$N$ & Bihan \cite{B}: $\le$ & Theorem \ref{thm:M}: $\le$ & Theorem \ref{thm:C}: $\ge$ & exact value\\\midrule
+9 & 13 & 8 & 6 & 6\\
+10 & 17 & 11 & 6 & 8\\
+11 & 21 & 15 & 10 & ?\\
+13 & 32 & 22 & 15 & ?\\\bottomrule
+\end{tabular}
+\caption{$\max\mathcal D(4,N-5)$. The exact values for $N=9,10$ are computer-assisted results from the same repository. For $N\le8$ Bihan's bound (through its Gale-side term) is at least as good as Theorem \ref{thm:M}.}
+\end{table}
+
+\begin{question}
+Is $\max\mathcal D(4,k)=N^2/8+O(N)$? Equality in Theorem \ref{thm:M} up to lower order terms would need a nearly neighborly sphere in which almost all edges have odd degree and maximal winding, with total defect $X=o(N^2)$. Facets with small defect and positive volume are close to degenerate, with two opposite edges $ab$, $cd$ such that $C_a\approx-C_b$, $C_c\approx-C_d$; the link cycle of a cross edge then alternates between vertices near $-C_a$ and near $-C_c$ and has even length. This suggests, but does not prove, that the constant $\tfrac3{16}$ is not attained.
+\end{question}
+
+\subsection*{Acknowledgment}
+The results, proofs and verifications were obtained with the AI assistant Claude (Anthropic). An independent review in a separate session, with independently written code, confirmed both theorems; the report and code are in the folder \texttt{n4-bounds} of the repository\\ \url{https://github.com/laughingbear/topological-degree-n3k3}.
+
+\begin{thebibliography}{9}
+\bibitem[B]{B} F.~Bihan, \emph{Descartes' rule of signs for the topological degree}, arXiv:2611.34336 (2026).
+\bibitem[D]{D} F.~Bihan, \emph{Topological degree of sparse polynomial maps}, arXiv:2610.29808 (2026).
+\bibitem[BN]{BN} A.~Barvinok and I.~Novik, \emph{A centrally symmetric version of the cyclic polytope}, Discrete Comput.\ Geom.\ 39 (2008), 76--99.
+\end{thebibliography}
+\end{document}

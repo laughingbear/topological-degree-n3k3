@@ -1,0 +1,5 @@
+OK: count = C(m,2) for all odd V in 5..79 and every l
+
+real	0m6.328s
+user	0m4.095s
+sys	0m0.004s

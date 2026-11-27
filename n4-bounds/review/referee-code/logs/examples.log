@@ -1,0 +1,31 @@
+deg9 nonpolytopal sphere: V=10 E=40 F=30 p=30 q=0 deg=9 sum_wv=40 sum_we=70 X=4.0000 Y=0.0000 idErr=2.1e-06 Dmax=0.297 4deg=36 < 40.0 OK supplied orientation coherent: True
+system deg8 N10: V=10 E=39 F=29 p=27 q=2 deg=8 sum_wv=35 sum_we=60 X=3.5739 Y=0.5739 idErr=3.1e-06 Dmax=0.306 4deg=32 < 37.5 OK
+D45 family claimed deg 0: V=10 E=39 F=29 p=9 q=20 deg=0 sum_wv=-4 sum_we=-15 X=1.8856 Y=5.8856 idErr=4.1e-06 Dmax=0.468 4deg=0 < 28.5 OK
+D45 family claimed deg 1: V=10 E=39 F=29 p=20 q=9 deg=1 sum_wv=7 sum_we=18 X=4.2666 Y=1.2667 idErr=3.9e-06 Dmax=0.478 4deg=4 < 34.0 OK
+D45 family claimed deg 2: V=10 E=39 F=29 p=19 q=10 deg=2 sum_wv=10 sum_we=19 X=4.4735 Y=2.4735 idErr=2.5e-06 Dmax=0.472 4deg=8 < 33.5 OK
+D45 family claimed deg 3: V=10 E=39 F=29 p=22 q=7 deg=3 sum_wv=15 sum_we=30 X=3.9298 Y=0.9298 idErr=1.4e-06 Dmax=0.392 4deg=12 < 35.0 OK
+D45 family claimed deg 4: V=10 E=39 F=29 p=21 q=8 deg=4 sum_wv=17 sum_we=30 X=3.5377 Y=2.5377 idErr=2.0e-06 Dmax=0.478 4deg=16 < 34.5 OK
+D45 family claimed deg 5: V=10 E=39 F=29 p=24 q=5 deg=5 sum_wv=23 sum_we=42 X=3.7707 Y=0.7707 idErr=5.6e-06 Dmax=0.392 4deg=20 < 36.0 OK
+D45 family claimed deg 6: V=10 E=39 F=29 p=25 q=4 deg=6 sum_wv=27 sum_we=48 X=3.6650 Y=0.6650 idErr=3.5e-06 Dmax=0.300 4deg=24 < 36.5 OK
+D45 family claimed deg 7: V=10 E=39 F=29 p=26 q=3 deg=7 sum_wv=31 sum_we=54 X=3.6546 Y=0.6546 idErr=2.7e-07 Dmax=0.311 4deg=28 < 37.0 OK
+D45 family claimed deg 8: V=10 E=39 F=29 p=27 q=2 deg=8 sum_wv=35 sum_we=60 X=3.5739 Y=0.5739 idErr=1.7e-06 Dmax=0.306 4deg=32 < 37.5 OK
+deg6 system 15: V=9 E=33 F=24 p=21 q=3 deg=6 sum_wv=26 sum_we=44 X=2.7019 Y=0.7019 idErr=4.4e-06 Dmax=0.268 4deg=24 < 30.0 OK
+deg6 system 19: V=9 E=33 F=24 p=24 q=0 deg=6 sum_wv=28 sum_we=52 X=4.0000 Y=0.0000 idErr=1.6e-06 Dmax=0.284 4deg=24 < 31.5 OK
+deg6 system 60: V=9 E=34 F=25 p=23 q=2 deg=6 sum_wv=27 sum_we=48 X=3.4953 Y=0.4953 idErr=6.5e-06 Dmax=0.352 4deg=24 < 32.0 OK
+deg6 system 101: V=9 E=32 F=23 p=22 q=1 deg=6 sum_wv=27 sum_we=48 X=3.1181 Y=0.1181 idErr=2.1e-07 Dmax=0.336 4deg=24 < 29.5 OK
+deg6 system 211: V=9 E=36 F=27 p=27 q=0 deg=6 sum_wv=27 sum_we=54 X=3.0000 Y=0.0000 idErr=3.5e-06 Dmax=0.231 4deg=24 < 36.0 OK
+deg6 system 244: V=9 E=32 F=23 p=22 q=1 deg=6 sum_wv=27 sum_we=48 X=3.2107 Y=0.2107 idErr=6.4e-06 Dmax=0.296 4deg=24 < 29.5 OK
+deg6 system 353: V=9 E=35 F=26 p=24 q=2 deg=6 sum_wv=27 sum_we=49 X=3.5008 Y=0.5008 idErr=4.1e-07 Dmax=0.424 4deg=24 < 33.5 OK
+deg6 system 702: V=9 E=31 F=22 p=20 q=2 deg=6 sum_wv=26 sum_we=44 X=2.4881 Y=0.4881 idErr=2.5e-06 Dmax=0.285 4deg=24 < 27.5 OK
+deg6 system 895: V=9 E=33 F=24 p=23 q=1 deg=6 sum_wv=27 sum_we=49 X=3.4640 Y=0.4640 idErr=3.1e-06 Dmax=0.464 4deg=24 < 31.0 OK
+random maps: 0  V distribution: {}
+  with q>0 and p>0 (mixed signs): 0
+  family uniform : 0 maps, deg distribution {}
+  family near : 0 maps, deg distribution {}
+  family trig : 0 maps, deg distribution {}
+  deg distribution: {}
+Traceback (most recent call last):
+  File "/home/claude/mycode/randmaps.py", line 250, in <module>
+    max(s["identity_err"] for s in stats), max(s["vol_err"] for s in stats),
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty

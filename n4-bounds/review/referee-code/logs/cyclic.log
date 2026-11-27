@@ -1,0 +1,20 @@
+V= 5 F=   5 same_sign=True deg=   1 (V-1)(V-3)/8=   1  OK
+V= 7 F=  14 same_sign=True deg=   3 (V-1)(V-3)/8=   3  OK
+V= 9 F=  27 same_sign=True deg=   6 (V-1)(V-3)/8=   6  OK
+V=11 F=  44 same_sign=True deg=  10 (V-1)(V-3)/8=  10  OK
+V=13 F=  65 same_sign=True deg=  15 (V-1)(V-3)/8=  15  OK
+V=15 F=  90 same_sign=True deg=  21 (V-1)(V-3)/8=  21  OK
+V=17 F= 119 same_sign=True deg=  28 (V-1)(V-3)/8=  28  OK
+V=19 F= 152 same_sign=True deg=  36 (V-1)(V-3)/8=  36  OK
+V=21 F= 189 same_sign=True deg=  45 (V-1)(V-3)/8=  45  OK
+V=23 F= 230 same_sign=True deg=  55 (V-1)(V-3)/8=  55  OK
+V=25 F= 275 same_sign=True deg=  66 (V-1)(V-3)/8=  66  OK
+V=27 F= 324 same_sign=True deg=  78 (V-1)(V-3)/8=  78  OK
+V=29 F= 377 same_sign=True deg=  91 (V-1)(V-3)/8=  91  OK
+V=31 F= 434 same_sign=True deg= 105 (V-1)(V-3)/8= 105  OK
+V=33 F= 495 same_sign=True deg= 120 (V-1)(V-3)/8= 120  OK
+V=35 F= 560 same_sign=True deg= 136 (V-1)(V-3)/8= 136  OK
+V=37 F= 629 same_sign=True deg= 153 (V-1)(V-3)/8= 153  OK
+V=39 F= 702 same_sign=True deg= 171 (V-1)(V-3)/8= 171  OK
+V=41 F= 779 same_sign=True deg= 190 (V-1)(V-3)/8= 190  OK
+ALL OK

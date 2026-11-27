@@ -1,0 +1,15 @@
+20 random maps done (75s); max identity err 8.1e-06
+40 random maps done (169s); max identity err 8.1e-06
+60 random maps done (262s); max identity err 8.6e-06
+80 random maps done (354s); max identity err 9.3e-06
+100 random maps done (444s); max identity err 1.1e-05
+random maps: 105  V distribution: {8: 10, 14: 10, 13: 11, 7: 9, 12: 19, 6: 8, 9: 10, 10: 11, 11: 17}
+  with q>0 and p>0 (mixed signs): 104
+  family uniform : 35 maps, deg distribution {0: 21, 1: 13, 2: 1}
+  family near : 35 maps, deg distribution {0: 16, 1: 18, 2: 1}
+  family trig : 35 maps, deg distribution {0: 20, 1: 14, 2: 1}
+  deg distribution: {1: 45, 0: 57, 2: 3}
+  max identity err 1.07e-05, max vol err 7.79e-06, max per-facet err 1.08e-05, max link-measure err 4.55e-15
+  min slack of bound: 4.0  max Dmax: 0.4999058392756099
+resampled because a facet basis had condition number > 1e6: 0
+FAILURES: 0
