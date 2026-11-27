@@ -11,8 +11,8 @@ rng = np.random.default_rng(0); roots = []
 mp.mp.dps = 40
 Am = mp.matrix(A.tolist()); Cm = mp.matrix(C.tolist())
 def Fm(*y):
-    w = [mp.e ** sum(Am[i, j] * y[j] for j in range(4)) for i in range(9)]
-    return [sum(Cm[r, i] * w[i] for i in range(9)) for r in range(4)]
+    w = [mp.e ** sum(Am[i, j] * y[j] for j in range(4)) for i in range(len(A))]
+    return [sum(Cm[r, i] * w[i] for i in range(len(A))) for r in range(4)]
 for trial in range(int(sys.argv[3]) if len(sys.argv) > 3 else 4000):
     y0 = rng.normal(size=4) * rng.choice([1, 3, 6])
     r = least_squares(G, y0, jac=J, xtol=1e-14, ftol=1e-14, gtol=1e-14, max_nfev=200)
