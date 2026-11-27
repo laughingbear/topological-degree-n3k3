@@ -1,5 +1,7 @@
 # The maximal topological degree for n = k = 3
 
+> **New (2026-11-26): n = 4, k = 5 and n = 5, k = 4.** D(4,5) = D(5,4) = {0, 1, …, 8}: with n = 4 variables and N = 10 monomials the maximal topological degree is 8. Over all triangulated 3-spheres with 10 vertices the maximum is 9, attained only on a non-polytopal sphere. Details, checked proofs and an independent review are in [n4k5/](n4k5/README.md).
+>
 > **New (2026-11-26): the case n = k = 4.** D(4,4) = {0, 1, …, 6}: the maximal topological degree with n = 4 variables and N = 9 monomials is 6 (Bihan's bound is 13). Explicit system, computer-assisted upper bound with checked proofs, and an independent review are in [n4k4/](n4k4/README.md).
 
 **Main result (version 3):** for every k ≥ 1,
