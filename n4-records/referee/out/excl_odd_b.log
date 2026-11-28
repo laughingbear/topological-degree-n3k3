@@ -1,0 +1,20 @@
+# progress 40s stats {'lp': 20000, 'lp_excl': 16620, 'quick': 0, 'kr_excl': 0, 'kr_one': 0, 'split': 3379, 'far_excl': 0, 'far_split': 0} roots 0 done-fraction-of-current-job 0.070217
+# progress 82s stats {'lp': 40000, 'lp_excl': 33275, 'quick': 0, 'kr_excl': 0, 'kr_one': 0, 'split': 6724, 'far_excl': 0, 'far_split': 0} roots 0 done-fraction-of-current-job 0.071196
+# progress 124s stats {'lp': 60000, 'lp_excl': 49929, 'quick': 0, 'kr_excl': 0, 'kr_one': 0, 'split': 10070, 'far_excl': 0, 'far_split': 0} roots 0 done-fraction-of-current-job 0.072731
+# progress 166s stats {'lp': 80000, 'lp_excl': 66381, 'quick': 26, 'kr_excl': 118, 'kr_one': 0, 'split': 13500, 'far_excl': 0, 'far_split': 0} roots 0 done-fraction-of-current-job 0.074618
+# progress 208s stats {'lp': 100000, 'lp_excl': 82508, 'quick': 38, 'kr_excl': 493, 'kr_one': 1, 'split': 16997, 'far_excl': 0, 'far_split': 0} roots 1 done-fraction-of-current-job 0.077139
+# progress 248s stats {'lp': 120000, 'lp_excl': 99068, 'quick': 42, 'kr_excl': 493, 'kr_one': 1, 'split': 20437, 'far_excl': 0, 'far_split': 0} roots 1 done-fraction-of-current-job 0.101272
+# progress 292s stats {'lp': 140000, 'lp_excl': 115622, 'quick': 45, 'kr_excl': 568, 'kr_one': 1, 'split': 23808, 'far_excl': 0, 'far_split': 0} roots 1 done-fraction-of-current-job 0.102183
+# progress 334s stats {'lp': 160000, 'lp_excl': 131275, 'quick': 45, 'kr_excl': 1434, 'kr_one': 1, 'split': 27289, 'far_excl': 0, 'far_split': 0} roots 1 done-fraction-of-current-job 0.102183
+# progress 376s stats {'lp': 180000, 'lp_excl': 146198, 'quick': 119, 'kr_excl': 2967, 'kr_one': 5, 'split': 30829, 'far_excl': 0, 'far_split': 0} roots 5 done-fraction-of-current-job 0.102183
+# progress 419s stats {'lp': 200000, 'lp_excl': 161939, 'quick': 127, 'kr_excl': 3796, 'kr_one': 5, 'split': 34259, 'far_excl': 0, 'far_split': 0} roots 5 done-fraction-of-current-job 0.102184
+# progress 462s stats {'lp': 220000, 'lp_excl': 178513, 'quick': 127, 'kr_excl': 3864, 'kr_one': 5, 'split': 37617, 'far_excl': 0, 'far_split': 0} roots 5 done-fraction-of-current-job 0.102184
+# job 61 shell done at 498s  stats {'lp': 237250, 'lp_excl': 192876, 'quick': 127, 'kr_excl': 3864, 'kr_one': 5, 'split': 40505, 'far_excl': 0, 'far_split': 0}  roots so far 5  selftest points/failures [579009, 0]
+# job 63 far done at 499s  stats {'lp': 237779, 'lp_excl': 193339, 'quick': 127, 'kr_excl': 3864, 'kr_one': 5, 'split': 40505, 'far_excl': 463, 'far_split': 66}  roots so far 5  selftest points/failures [580398, 0]
+# job 65 shell done at 499s  stats {'lp': 237803, 'lp_excl': 193357, 'quick': 128, 'kr_excl': 3864, 'kr_one': 5, 'split': 40511, 'far_excl': 463, 'far_split': 66}  roots so far 5  selftest points/failures [580455, 0]
+# job 67 shell done at 499s  stats {'lp': 237860, 'lp_excl': 193398, 'quick': 128, 'kr_excl': 3864, 'kr_one': 5, 'split': 40527, 'far_excl': 463, 'far_split': 66}  roots so far 5  selftest points/failures [580578, 0]
+# job 69 shell done at 499s  stats {'lp': 237879, 'lp_excl': 193411, 'quick': 134, 'kr_excl': 3864, 'kr_one': 5, 'split': 40533, 'far_excl': 463, 'far_split': 66}  roots so far 5  selftest points/failures [580635, 0]
+# job 71 shell done at 499s  stats {'lp': 237888, 'lp_excl': 193419, 'quick': 134, 'kr_excl': 3864, 'kr_one': 5, 'split': 40534, 'far_excl': 463, 'far_split': 66}  roots so far 5  selftest points/failures [580659, 0]
+ZERO t = [ 0.178077444412  0.355397686393 -0.182847097044 -0.533425845880] sign 1
+ZERO t = [ 0.787317795390  2.554671125605 -2.122377169554 -5.115825827567] sign 1
+DONE part 0/2: zeros 2 signed 2 stats {'lp': 237888, 'lp_excl': 193419, 'quick': 134, 'kr_excl': 3864, 'kr_one': 5, 'split': 40534, 'far_excl': 463, 'far_split': 66} selftest points/failures [580659, 0] time 499s
