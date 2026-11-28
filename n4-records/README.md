@@ -33,7 +33,7 @@ polytopes, so these records bound the sphere version of the question, not Bihan'
 |---|---|---|---|---|
 | 12 | 13 | 0 | (12,63,102,51) | 11 (section 1) |
 | 13 | 16 | 5 | (13,74,122,61) | 15 |
-| 14 | 17 | 0 | (14,77,126,63) | 15 |
+| 14 | 17 | 0 | (14,77,126,63) | 16 (section 3; was 15) |
 | 16 | 25 | 7 | (16,116,200,100) | 21 |
 | 18 | 35 | 0 | (18,135,234,117) | 28 |
 | 20 | 41 | 8 | (20,185,330,165) | 36 |
@@ -77,3 +77,35 @@ python3 check_proof.py out/proof_*.json
 code); `referee/REVIEW.md` is its report: all claims confirmed.
 
 Found with Claude (Anthropic). Laughing Bear, 2026-11-27.
+
+## 3. N = 14: the maximal degree is at least 16 (added 2026-11-27, evening)
+
+`n14/certs/system_N14_deg16.json` is an explicit system with 14 monomials (exponents in [0,117],
+integer coefficients in [-20,20]). Conditions (U_A) and (U_C) hold, the Newton polytope is
+simplicial with 14 vertices and 56 facets, f = (14,70,112,56), all 56 facets have the same sign,
+and Bihan's formula gives degree -16.
+
+- Previous lower bound at N = 14: 15. That is our own bound from `n4-bounds/` (the even-N value
+  (N-2)(N-4)/8 of the cyclic construction, explicit system in `n4-bounds/cyclic_systems.json`).
+  We know of no lower bound for D(4,9) by anyone else. For comparison,
+  `n14/certs/C14_cyclic_deg15.json` is a vertex map of degree 15 on the cyclic polytope C(14,4)
+  itself, built the same way.
+- Upper bound at N = 14 (Theorem M in `n4-bounds/`): 27. On 14-vertex 3-spheres the best value
+  known is 17 (section 2), on a sphere that is not a polytope.
+- Independent of Bihan's theorem: the referee counted the positive solutions. The system has
+  exactly 30, all nondegenerate, 7 with positive and 23 with negative Jacobian determinant, signed
+  count -16. Existence, uniqueness and the signs are proved in exact rational interval arithmetic,
+  and so is the absence of solutions outside the cube |log x| <= 8; the absence of a 31st solution
+  inside the cube rests on floating-point interval arithmetic with outward rounding
+  (`n14/referee/S_outer.py`, `S_inner.cpp`, `S_certify.py`).
+- How it was found: the 14 exponent vectors are two orbits of the cyclic group Z_7 acting on R^4 by
+  two rotations (angles 2 pi/7 and 4 pi/7), the coefficient vectors are two orbits under rotations
+  by 2 pi/7 and 6 pi/7, and everything is then rounded to integers (`n14/search/`). No maximality
+  is claimed: 16 is the best value found in this one symmetric family.
+- `n14/certs/system_N14_deg16_small.json` (from the referee) has exponents in [0,51] and
+  coefficients in [-17,16], the same 56 facets and formula value -16; its solutions were not counted.
+- Three coefficients of the main system are zero, so two of the four polynomials have 13 and 12
+  monomials; the system has 14 and (U_C) holds.
+
+Review: `n14/referee/REVIEW.md` (independent exact code, all claims confirmed; the referee could
+not locate the benchmark 15 because the review package did not cite `n4-bounds/`; it is cited above).

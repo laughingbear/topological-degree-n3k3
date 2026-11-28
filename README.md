@@ -1,5 +1,7 @@
 # The maximal topological degree for n = k = 3
 
+> **New (2026-11-27, second addendum): n = 4, N = 14.** An explicit system with 14 monomials has topological degree 16, one more than our cyclic construction gives; the referee also certified its 30 positive solutions (signed count -16). See section 3 of [n4-records/](n4-records/README.md).
+>
 > **New (2026-11-27, addendum): n = 4, N = 12, and spheres that are not polytopes.** An explicit system with 12 monomials has topological degree 11, one more than the cyclic construction gives. On triangulated 3-spheres with 12, 13, 14, 16, 18, 20 vertices there are vertex maps of degree 13, 16, 17, 25, 35, 41, above the best polytopal values known, and none of these spheres is the boundary of a polytope (short checked proofs). Certificates and an independent review are in [n4-records/](n4-records/README.md).
 >
 > **New (2026-11-27): n = 4, every N.** (N−1)(N−3)/8 ≤ max |deg F| < (3N² − 11N)/16 for odd N: a new upper bound for all sign patterns (better than Bihan's for N ≥ 9) and an explicit family on cyclic polytopes. The maximum grows like c·N² with 1/8 ≤ c ≤ 3/16. Proofs, explicit systems and an independent review are in [n4-bounds/](n4-bounds/README.md).

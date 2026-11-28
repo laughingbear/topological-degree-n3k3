@@ -1,0 +1,38 @@
+== consistency of the two certificate files ==
+PASS system.A == polytope_points (both files)
+PASS columns of system.C == C_int (both files)
+PASS 14 distinct points
+== P1: general position, convex position, facets ==
+PASS (U_A) all C(14,5)=2002 5x5 minors of A-hat nonzero : min |minor| = 14280
+PASS facets of conv(A) recomputed by brute force == claimed list : mine 56, claimed 56, mine-claimed [], claimed-mine []
+PASS claimed facets are 56 distinct sorted 4-sets
+PASS convex position: every point is a vertex of a facet
+PASS f-vector == (14,70,112,56) : (14, 70, 112, 56)
+PASS every triangle lies in exactly 2 facets
+PASS Euler: V-E+T-F == 0
+PASS every vertex link is a connected closed surface with chi=2 (a 2-sphere)
+PASS dual graph connected (orientation unique up to global sign)
+== orientation, two ways ==
+PASS combinatorial coherent orientation exists (complex orientable)
+PASS combinatorial orientation == +-(geometric orientation) : ratio {-1}
+PASS geometric orientation satisfies the coherence condition directly
+== P2: vertex map, degree, q ==
+PASS all 56 facet determinants of C nonzero : min |det| = 1441
+PASS (U_C) all C(14,4)=1001 4x4 minors of C nonzero : min |minor| = 20
+   facet signs with combinatorial orientation: +56 / -0
+   facet signs with geometric orientation: +0 / -56
+PASS all 56 facets have the same sign s_t
+   generic u tested: 6136 of 6204 ; (deg_comb, deg_geom, bihan) -> count: {(16, -16, -16): 6136}
+   number of facet cones containing u -> count: {16: 6136}
+PASS degree independent of u, same for both orientations up to global sign
+PASS |deg| == 16 : deg_comb=16 deg_geom=-16
+PASS Bihan's formula value == -16 at every generic u tested : -16
+PASS q == 0 : q=0
+== P3: Theorem M arithmetic ==
+PASS 4|deg| < 2F - E/2 - q/2 : 64 < 77
+   largest |deg| allowed by Theorem M with q=0 for this f-vector: 19
+== comparison with the authors' stored orientation (not used above) ==
+PASS authors' stored orientation == +-(mine) : ratio {1}
+   stored orientation relative to geometric (sign det A-hat, extra index last): {-1}
+PASS stored degree/q/f fields
+ALL PASS

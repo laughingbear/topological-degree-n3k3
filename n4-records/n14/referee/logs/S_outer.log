@@ -1,0 +1,2 @@
+monomial shift b = [57, 60, 44, 46]
+PASS: no positive root with |log x|_inf >= 8  (3515 direction boxes, max depth 11, exact arithmetic)
